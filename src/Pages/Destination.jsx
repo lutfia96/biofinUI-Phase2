@@ -10,7 +10,7 @@ function Destination() {
         <>
             <HeaderOne />
             <Breadcrumb
-                title="Destination"
+                title="Marine attaractions"
             />
             <DestinationInner />
             <FooterFour />

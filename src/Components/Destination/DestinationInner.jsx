@@ -263,7 +263,7 @@ function DestinationInner() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="widget widget_tag_cloud  ">
+                            {/* <div className="widget widget_tag_cloud  ">
                                 <h3 className="widget_title">Popular Tags</h3>
                                 <div className="tagcloud">
                                     <Link to="/blog">Tour</Link>
@@ -275,8 +275,8 @@ function DestinationInner() {
                                     <Link to="/blog">Luxury</Link>
                                     <Link to="/blog">Travel</Link>
                                 </div>
-                            </div>
-                            <div
+                            </div> */}
+                            {/* <div
                                 className="widget widget_offer  "
                                 data-bg-src="/assets/img/bg/widget_bg_1.jpg"
                                 style={{ backgroundImage: "url(/assets/img/bg/widget_bg_1.jpg)" }}
@@ -300,7 +300,7 @@ function DestinationInner() {
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </aside>
                     </div>
                 </div>

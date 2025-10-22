@@ -204,44 +204,30 @@ function HeaderOne() {
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <Link to="/about">About Us</Link>
+                                            </li> */}
+                                            <li >
+                                                <Link to="/marine">Marine Attractions</Link>
+                                              
                                             </li>
-                                            <li className="menu-item-has-children">
-                                                <Link to="#">Destination</Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/destination">Destination</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/destination/1">
-                                                            Destination Details
-                                                        </Link>
-                                                    </li>
-                                                </ul>
+                                             <li >
+                                                <Link to="/forest">Forest Attractions</Link>
+                                              
                                             </li>
-                                            <li className="menu-item-has-children">
-                                                <Link to="#">Service</Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/service">Services</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/1">Service Details</Link>
-                                                    </li>
-                                                </ul>
+                                             <li >
+                                                <Link to="/heritage">Our Heritage</Link>
+                                              
                                             </li>
-                                            <li className="menu-item-has-children">
-                                                <Link to="#">Activities</Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/activities">activities</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/activities-details">activities Details</Link>
-                                                    </li>
-                                                </ul>
+                                             <li >
+                                                <Link to="/about-fees">About Fees</Link>
+                                              
                                             </li>
+                                              <li >
+                                                <Link to="/faq">FAQ</Link>
+                                              
+                                            </li>
+                
                                             <li className="menu-item-has-children">
                                                 <Link to="#">Pages</Link>
                                                 <ul className="sub-menu">
@@ -302,7 +288,7 @@ function HeaderOne() {
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li className="menu-item-has-children">
+                                            {/* <li className="menu-item-has-children">
                                                 <Link to="#">Blog</Link>
                                                 <ul className="sub-menu">
                                                     <li>
@@ -312,9 +298,12 @@ function HeaderOne() {
                                                         <Link to="/blog/1">Blog Details</Link>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> */}
                                             <li>
                                                 <Link to="/contact">Contact us</Link>
+                                            </li>
+                                              <li>
+                                                <Link to="/cart">Cart</Link>
                                             </li>
                                         </ul>
                                     </nav>
