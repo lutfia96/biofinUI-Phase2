@@ -9,9 +9,9 @@ function AboutFees() {
     return (
         <>
             <HeaderOne />
-            <Breadcrumb
+            {/* <Breadcrumb
                 title="About Fees"
-            />
+            /> */}
             <TourDetailsMain />
             <FooterFour />
             <ScrollToTop />

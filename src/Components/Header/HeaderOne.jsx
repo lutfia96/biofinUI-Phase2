@@ -34,7 +34,7 @@ function HeaderOne() {
         <>
             {/*============================== Header Area ==============================*/}
             <header className="th-header header-layout1">
-                <div className="header-top">
+                {/* <div className="header-top">
                     <div className="container th-container">
                         <div className="row justify-content-center justify-content-xl-between align-items-center">
                             <div className="col-auto d-none d-md-block">
@@ -80,7 +80,7 @@ function HeaderOne() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`}>
                     {/* Main Menu Area */}
                     <div className="menu-area">
@@ -96,11 +96,11 @@ function HeaderOne() {
                                 <div className="col-auto me-xl-auto">
                                     <nav className="main-menu d-none d-xl-inline-block">
                                         <ul>
-                                            <li className="menu-item-has-children mega-menu-wrap">
+                                            <li >
                                                 <Link className="active" to="/">
                                                     Home
                                                 </Link>
-                                                <ul className="mega-menu mega-menu-content">
+                                                {/* <ul className="mega-menu mega-menu-content">
                                                     <li>
                                                         <div className="container">
                                                             <div className="row gy-4">
@@ -202,7 +202,7 @@ function HeaderOne() {
                                                             </div>
                                                         </div>
                                                     </li>
-                                                </ul>
+                                                </ul> */}
                                             </li>
                                             {/* <li>
                                                 <Link to="/about">About Us</Link>

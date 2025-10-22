@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import HomeOne from './HomeOne'
+import HomeOne from './HomeOnes'
 import HomeTwo from './HomeTwo'
 import HomeThree from './HomeThree'
 import HomeFour from './HomeFour'
@@ -39,8 +39,8 @@ function RouterPage() {
       <Router>
         <LoadTop />
         <Routes>
-          <Route path="/" element={<HomeOne />}></Route>
-          <Route path="/home-tour" element={<HomeTwo />}></Route>
+          {/* <Route path="/" element={<HomeOne />}></Route> */}
+          <Route path="/" element={<HomeTwo />}></Route>
           <Route path="/home-agency" element={<HomeThree />}></Route>
           <Route path="/home-yacht" element={<HomeFour />}></Route>
           <Route path="/about" element={<About />}></Route>

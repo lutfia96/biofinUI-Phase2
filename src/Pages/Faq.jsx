@@ -11,12 +11,12 @@ function Faq() {
     return (
         <>
             <HeaderOne />
-            <Breadcrumb
+            {/* <Breadcrumb
                 title="FAQs"
-            />
+            /> */}
             <FaqInner />
             <ElementSection />
-            <FaqContact />
+            {/* <FaqContact /> */}
             <FooterFour />
             <ScrollToTop />
         </>

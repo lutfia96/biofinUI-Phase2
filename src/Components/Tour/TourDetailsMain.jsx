@@ -79,10 +79,15 @@ function TourDetailsMain() {
     return (
         <section className="space">
             <div className="container shape-mockup-wrap">
+                          <div className="title-area text-center">
+                            <span className="sub-title">About Entrance Fees</span>
+                            <h4 className="sec-title">Learn how your entrance fees support conservation,communities,and sustainable tourism in Zanzibar</h4>
+                            {/* <p>Have questions you want answers to?</p> */}
+                        </div>
                 <div className="row">
                     <div className="col-xxl-8 col-lg-7">
                         <div className="tour-page-single">
-                            <div className="slider-area tour-slider1">
+                            {/* <div className="slider-area tour-slider1">
                                 <Swiper
                                     modules={[Navigation, Thumbs, EffectFade]}
                                     effect="fade"
@@ -133,9 +138,10 @@ function TourDetailsMain() {
                                 >
                                     <img src="/assets/img/icon/hero-arrow-right.svg" alt="" />
                                 </button>
-                            </div>
+                            </div> */}
+                        
                             <div className="page-content">
-                                <div className="page-meta mb-45">
+                                {/* <div className="page-meta mb-45">
                                     <Link className="page-tag mr-5" to="/tour">
                                         Featured
                                     </Link>
@@ -143,7 +149,9 @@ function TourDetailsMain() {
                                         <i className="fa-sharp fa-solid fa-star" />
                                         <span>4.8</span>
                                     </span>
-                                </div>
+                                </div> */}
+                            
+                                
                                 <h2 className="box-title">
                                     Explore the Beauty of Maldives and enjoy
                                 </h2>
@@ -293,176 +301,7 @@ function TourDetailsMain() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xxl-4 col-lg-5">
-                        <aside className="sidebar-area">
-                            <div className="widget widget_search  ">
-                                <form className="search-form">
-                                    <input type="text" placeholder="Search" />
-                                    <button type="submit">
-                                        <i className="far fa-search" />
-                                    </button>
-                                </form>
-                            </div>
-                            <div className="widget widget_categories  ">
-                                <h3 className="widget_title">Categories</h3>
-                                <ul>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            City Tour
-                                        </Link>
-                                        <span>(8)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Beach Tours
-                                        </Link>
-                                        <span>(6)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Wildlife Tours
-                                        </Link>
-                                        <span>(2)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            News &amp; Tips
-                                        </Link>
-                                        <span>(7)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Adventure Tours
-                                        </Link>
-                                        <span>(9)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Mountain Tours
-                                        </Link>
-                                        <span>(10)</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="widget  ">
-                                <h3 className="widget_title">Recent Posts</h3>
-                                <div className="recent-post-wrap">
-                                    <div className="recent-post">
-                                        <div className="media-img">
-                                            <Link to="/blog/1">
-                                                <img
-                                                    src="/assets/img/blog/recent-post-1-1.jpg"
-                                                    alt="Blog"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="media-body">
-                                            <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
-                                                    Exploring The Green Spaces Of the island maldives
-                                                </Link>
-                                            </h4>
-                                            <div className="recent-post-meta">
-                                                <Link to="/blog">
-                                                    <i className="fa-regular fa-calendar" />
-                                                    22/6/ 2025
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="recent-post">
-                                        <div className="media-img">
-                                            <Link to="/blog/1">
-                                                <img
-                                                    src="/assets/img/blog/recent-post-1-2.jpg"
-                                                    alt="Blog"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="media-body">
-                                            <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
-                                                    Harmony With Nature Of Belgium Tour and travle
-                                                </Link>
-                                            </h4>
-                                            <div className="recent-post-meta">
-                                                <Link to="/blog">
-                                                    <i className="fa-regular fa-calendar" />
-                                                    25/6/ 2025
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="recent-post">
-                                        <div className="media-img">
-                                            <Link to="/blog/1">
-                                                <img
-                                                    src="/assets/img/blog/recent-post-1-3.jpg"
-                                                    alt="Blog"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="media-body">
-                                            <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
-                                                    Exploring The Green Spaces Of Realar Residence
-                                                </Link>
-                                            </h4>
-                                            <div className="recent-post-meta">
-                                                <Link to="/blog">
-                                                    <i className="fa-regular fa-calendar" />
-                                                    27/6/ 2025
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="widget widget_tag_cloud  ">
-                                <h3 className="widget_title">Popular Tags</h3>
-                                <div className="tagcloud">
-                                    <Link to="/blog">Tour</Link>
-                                    <Link to="/blog">Adventure</Link>
-                                    <Link to="/blog">Rent</Link>
-                                    <Link to="/blog">Innovate</Link>
-                                    <Link to="/blog">Hotel</Link>
-                                    <Link to="/blog">Modern</Link>
-                                    <Link to="/blog">Luxury</Link>
-                                    <Link to="/blog">Travel</Link>
-                                </div>
-                            </div>
-                            <div
-                                className="widget widget_offer"
-                                style={{ background: "url(/assets/img/bg/widget_bg_1.jpg)" }}
-                            >
-                                <div className="offer-banner">
-                                    <div className="offer">
-                                        <h6 className="box-title">
-                                            Need Help? We Are Here To Help You
-                                        </h6>
-                                        <div className="banner-logo">
-                                            <img src="/assets/img/logo2.svg" alt="Tourm" />
-                                        </div>
-                                        <div className="offer">
-                                            <h6 className="offer-title">You Get Online support</h6>
-                                            <Link className="offter-num" to={+256214203215}>
-                                                +256 214 203 215
-                                            </Link>
-                                        </div>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
-                                            Read More
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
+                    
                 </div>
                 <div className="location-map">
                     <h3 className="page-title mt-45 mb-30">Location</h3>

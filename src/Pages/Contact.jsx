@@ -11,12 +11,12 @@ function Contact() {
     return (
         <>
             <HeaderOne />
-            <Breadcrumb
+            {/* <Breadcrumb
                 title='Contact Us'
-            />
+            /> */}
             <GetInTouch />
-            <BookATour />
-            <ContactMap />
+            {/* <BookATour /> */}
+            {/* <ContactMap /> */}
             <FooterFour />
             <ScrollToTop />
         </>

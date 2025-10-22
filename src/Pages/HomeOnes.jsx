@@ -14,11 +14,15 @@ import BrandOne from '../Components/Brand/BrandOne'
 import BlogOne from '../Components/Blog/BlogOne'
 import FooterOne from '../Components/Footer/FooterOne'
 import ScrollToTop from '../Components/ScrollToTop'
+import HeaderThree from '../Components/Header/HeaderThree'
+import BannerTwo from '../Components/Banner/BannerTwo'
 
 function HomeOne() {
     return (
         <div>
             <HeaderOne />
+               {/* <HeaderThree /> */}
+                {/* <BannerTwo /> */}
             <BannerOne />
             <Booking />
             <CategoryOne />

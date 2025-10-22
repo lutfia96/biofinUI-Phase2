@@ -14,12 +14,20 @@ import BlogTwo from '../Components/Blog/BlogTwo'
 import FooterTwo from '../Components/Footer/FooterTwo'
 import ElementSection from '../Components/Elements/ElementSection'
 import ScrollToTop from '../Components/ScrollToTop'
+import HeaderThree from '../Components/Header/HeaderThree'
+import BannerThree from '../Components/Banner/BannerThree'
+import HeaderOne from '../Components/Header/HeaderOne'
+import BannerOne from '../Components/Banner/BannerOne'
 
 function HomeTwo() {
   return (
     <div>
-      <HeaderTwo />
-      <BannerTwo />
+      {/* <HeaderTwo /> */}
+        {/* <HeaderThree /> */}
+        {/* <BannerThree /> */}
+        <HeaderOne />
+         <BannerOne />
+      {/* <BannerTwo /> */}
       <DestinationTwo />
       <CategoryTwo />
       {/* <OfferOne /> */}
