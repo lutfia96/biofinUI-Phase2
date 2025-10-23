@@ -2,12 +2,17 @@ import React, { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Core Swiper styles
 import { Pagination, EffectFade, Navigation } from 'swiper/modules';
+
+// import  getCarousalQuery from "../../hook/query/websiteQuery";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Link } from 'react-router-dom';
 function BannerOne() {
+    // const {data:calousal} = getCarousalQuery();
+    // console.log("Courasel: ",calousal);
+    
     const swiperRef = useRef(null);
 
     useEffect(() => {

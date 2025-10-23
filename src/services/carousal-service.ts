@@ -1,4 +1,4 @@
-import { CarousalTypeResponse } from "@/types/CarousalType";
+import { CarousalTypeResponse } from "../types/CarousalType";
 import { get } from "./http";
 
 const getAllCarousal = async () => {

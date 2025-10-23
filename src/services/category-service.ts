@@ -1,4 +1,4 @@
-import { CategoryTypeResponse } from "@/types/CategoryType";
+import { CategoryTypeResponse } from "../types/CategoryType";
 import { get } from "./http";
 
 const getAllCategory = async () => {

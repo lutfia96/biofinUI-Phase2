@@ -2,7 +2,7 @@ import {
   AttractionByEntityResponse,
   AttractionTypeResponse,
   SiteBySlugNameResponse,
-} from "@/types/AttractionType";
+} from "../types/AttractionType";
 import { get } from "./http";
 
 const getAllAttraction = async () => {
