@@ -84,13 +84,13 @@ function DestinationInner() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-xxl-9 col-lg-8">
+                    <div className="col-xxl-12 col-lg-12">
                         <div className="tab-content" id="nav-tabContent">
                             <div className={`tab-pane fade ${activeTab === 'tab-grid' ? 'show active' : ''}`} id="tab-grid" role="tabpanel"
                             >
                                 <div className="row gy-30">
                                     {currentPosts.map((data, index) => (
-                                        <div key={index} className="col-xxl-4 col-xl-6">
+                                        <div key={index} className="col-xxl-4 col-xl-12">
                                             <DestinationCard
                                                 destinationID={data.id}
                                                 destinationImage={`${data.image}`}

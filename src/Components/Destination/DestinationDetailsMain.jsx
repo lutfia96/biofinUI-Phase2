@@ -6,7 +6,8 @@ import Modal from '../Gallery/Modal';
 function DestinationDetailsMain() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalImage, setModalImage] = useState("");
-    const { id } = useParams();
+    const id = 1;
+    // const { id } = useParams();
     const destinationPost = Posts.find(post => post.id === parseInt(id));
 
     if (!destinationPost) {

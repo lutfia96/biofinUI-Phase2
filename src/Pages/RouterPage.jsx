@@ -45,11 +45,12 @@ function RouterPage() {
           <Route path="/home-yacht" element={<HomeFour />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/marine" element={<Destination />}></Route>
-          <Route path="/marine/:id" element={<DestinationDetails />} />
+          <Route path="/marine/:id" element={<ResortDetails />} />
+          {/* <Route path="/marine/:id" element={<DestinationDetails />} /> */}
           <Route path="/forest" element={<Forest/>}></Route>
-          <Route path="/forest/:id" element={<DestinationDetails />} />
+          <Route path="/forest/:id" element={<ResortDetails  />} />
           <Route path="/heritage" element={<Heritage/>}></Route>
-          <Route path="/heritage/:id" element={<DestinationDetails />} />
+          <Route path="/heritage/:id" element={<ResortDetails  />} />
            <Route path="/about-fees" element={<AboutFees />}></Route>
           <Route path="/service" element={<Service />}></Route>
           <Route path="/service/:id" element={<ServiceDetails />} />

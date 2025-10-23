@@ -4,7 +4,8 @@ import Posts from '../data/data-resort.json';
 import Modal from '../Gallery/Modal';
 
 function ResortDetailsMain() {
-    const { id } = useParams();
+    const id  = 1;
+    // const { id } = useParams();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalImage, setModalImage] = useState('');
 
@@ -32,9 +33,9 @@ function ResortDetailsMain() {
                 <div className="row">
                     <div className="col-xxl-8 col-lg-7">
                         <div className="page-single">
-                            <div className="service-img global-img">
+                            {/* <div className="service-img global-img">
                                 <img src={`/assets/img/normal/${resortPost.bannerImg}`} alt="" />
-                            </div>
+                            </div> */}
                             <div className="page-content d-block">
                                 <h3 className="box-title mt-20">
                                     <Link to="#">{resortPost.title}</Link>
@@ -58,13 +59,13 @@ function ResortDetailsMain() {
                                     the natural beauty of the sea from their rooms, restaurants,
                                     pools, and other areas within the property.
                                 </p>
-                                <h4 className="">Children and extra beds.</h4>
-                                <p className="blog-text mb-35">
+                                {/* <h4 className="">Children and extra beds.</h4> */}
+                                {/* <p className="blog-text mb-35">
                                     Children are welcome Kids stay free! Children stay free when using
                                     existing bedding; children may not be eligible for complimentary
                                     breakfast Rollaway/extra beds are available for $ 10 per day.
-                                </p>
-                                <h2 className="box-title">Highlights</h2>
+                                </p> */}
+                                {/* <h2 className="box-title">Highlights</h2>
                                 <ul className="resort-grid-list">
                                     <li>
                                         <div className="resort-grid-list-icon">
@@ -146,7 +147,7 @@ function ResortDetailsMain() {
                                             <h4 className="resort-grid-list-title">Bath</h4>
                                         </div>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
                             <div className="destination-gallery-wrapper">
                                 <h3 className="page-title mt-30 mb-30">From our gallery</h3>
@@ -221,7 +222,7 @@ function ResortDetailsMain() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="th-comments-wrap style2 ">
+                            {/* <div className="th-comments-wrap style2 ">
                                 <h2 className="blog-inner-title h4">Reviews (3)</h2>
                                 <ul className="comment-list">
                                     <li className="th-comment-item">
@@ -326,9 +327,9 @@ function ResortDetailsMain() {
                                         </div>
                                     </li>
                                 </ul>
-                            </div>{" "}
+                            </div>{" "} */}
                             {/* Comment end */} {/* Comment Form */}
-                            <div className="th-comment-form ">
+                            {/* <div className="th-comment-form ">
                                 <div className="row">
                                     <h3 className="blog-inner-title h4 mb-2">Leave a Reply</h3>
                                     <p className="mb-25">
@@ -384,19 +385,19 @@ function ResortDetailsMain() {
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="col-xxl-4 col-lg-5">
                         <aside className="sidebar-area style3">
-                            <div className="widget widget_search  ">
+                            {/* <div className="widget widget_search  ">
                                 <form className="search-form">
                                     <input type="text" placeholder="Search" />
                                     <button type="submit">
                                         <i className="far fa-search" />
                                     </button>
                                 </form>
-                            </div>
+                            </div> */}
                             <div className="widget widget_categories  ">
                                 <h3 className="widget_title">Categories</h3>
                                 <ul>
@@ -444,7 +445,7 @@ function ResortDetailsMain() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="widget  ">
+                            {/* <div className="widget  ">
                                 <h3 className="widget_title">Recent Posts</h3>
                                 <div className="recent-post-wrap">
                                     <div className="recent-post">
@@ -517,8 +518,8 @@ function ResortDetailsMain() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="widget widget_tag_cloud  ">
+                            </div> */}
+                            {/* <div className="widget widget_tag_cloud  ">
                                 <h3 className="widget_title">Popular Tags</h3>
                                 <div className="tagcloud">
                                     <Link to="/blog">Tour</Link>
@@ -530,12 +531,12 @@ function ResortDetailsMain() {
                                     <Link to="/blog">Luxury</Link>
                                     <Link to="/blog">Travel</Link>
                                 </div>
-                            </div>
+                            </div> */}
                             <div
                                 className="widget widget_offer"
                                 style={{background: "url(/assets/img/bg/widget_bg_1.jpg)"}}
                             >
-                                <div className="offer-banner">
+                                {/* <div className="offer-banner">
                                     <div className="offer">
                                         <h6 className="box-title">
                                             Need Help? We Are Here To Help You
@@ -553,7 +554,20 @@ function ResortDetailsMain() {
                                             Read More
                                         </Link>
                                     </div>
-                                </div>
+                                </div> */}
+                                 <div className="location-map">
+                    <h3 className="page-title mt-45 mb-30">Location</h3>
+                    <div className="contact-map style3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sAngfuztheme!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd"
+                            allowFullScreen=""
+                            loading="lazy"
+                        />
+                        <div className="contact-icon">
+                            <img src="/assets/img/icon/location-dot3.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
                             </div>
                         </aside>
                     </div>

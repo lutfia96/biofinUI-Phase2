@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function DestinationTwo() {
     const destinations = [
-        { name: "Thailand", image: "destination_2_1.jpg", listings: 28 },
+        // { name: "Thailand", image: "destination_2_1.jpg", listings: 28 },
         { name: "Belgium", image: "destination_2_2.jpg", listings: 15 },
         { name: "Island", image: "destination_2_3.jpg", listings: 22 },
         { name: "Maldives", image: "destination_2_4.jpg", listings: 25 },
@@ -41,18 +41,18 @@ function DestinationTwo() {
                                         <span className="destination-subtitle">{item.listings} Listing</span>
                                     </div>
                                     <Link to="/contact" className="th-btn style2">
-                                        Book Now
+                                        Explore
                                     </Link>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="destination-btn text-center mt-60">
+                {/* <div className="destination-btn text-center mt-60">
                     <Link to="/destination" className="th-btn style3 th-icon">
                         View All
                     </Link>
-                </div>
+                </div> */}
                 {/* Shape Mockups with Inline Styles */}
                 <div 
                     className="shape-mockup movingX d-none d-xl-block"

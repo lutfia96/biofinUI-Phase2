@@ -41,8 +41,8 @@ function DestinationCard(props) {
                         <span>
                             <i className="fa-light fa-clock" />7 Days
                         </span>
-                        <Link to="/contact" className="th-btn style4 th-icon">
-                            Book Now
+                        <Link to="/marine/:id" className="th-btn style4 th-icon">
+                            View Details
                         </Link>
                     </div>
                 </div>
