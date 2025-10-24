@@ -213,71 +213,71 @@ function TourDetailsMain() {
                         </div>
                     </div>
 
-                    {/* Card 3 */}
-                    <div className="card custom-card w-100">
-                        <div className="col-6">
-                            <div className="card-body p-4">
-                                <h2 className="box-title mb-3 text-start">Basic Information</h2>
-                                <div className="row text-start">
-                                    <div className="col-md-6">
-                                        <ul className="list-unstyled">
-                                            <li>Destination</li>
-                                            <li>Departure</li>
-                                            <li>Language</li>
-                                            <li>Return Date</li>
-                                            <li>Departure Date</li>
-                                            <li>No. of Guide</li>
-                                        </ul>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <ul className="list-unstyled fw-semibold">
-                                            <li>Netherlands</li>
-                                            <li>Singapore Airport, Singapore</li>
-                                            <li>English</li>
-                                            <li>August 12, 2024</li>
-                                            <li>Netherlands</li>
-                                            <li>2 Guides</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {/*/!* Card 3 *!/*/}
+                    {/*<div className="card custom-card w-100">*/}
+                    {/*    <div className="col-6">*/}
+                    {/*        <div className="card-body p-4">*/}
+                    {/*            <h2 className="box-title mb-3 text-start">Basic Information</h2>*/}
+                    {/*            <div className="row text-start">*/}
+                    {/*                <div className="col-md-6">*/}
+                    {/*                    <ul className="list-unstyled">*/}
+                    {/*                        <li>Destination</li>*/}
+                    {/*                        <li>Departure</li>*/}
+                    {/*                        <li>Language</li>*/}
+                    {/*                        <li>Return Date</li>*/}
+                    {/*                        <li>Departure Date</li>*/}
+                    {/*                        <li>No. of Guide</li>*/}
+                    {/*                    </ul>*/}
+                    {/*                </div>*/}
+                    {/*                <div className="col-md-6">*/}
+                    {/*                    <ul className="list-unstyled fw-semibold">*/}
+                    {/*                        <li>Netherlands</li>*/}
+                    {/*                        <li>Singapore Airport, Singapore</li>*/}
+                    {/*                        <li>English</li>*/}
+                    {/*                        <li>August 12, 2024</li>*/}
+                    {/*                        <li>Netherlands</li>*/}
+                    {/*                        <li>2 Guides</li>*/}
+                    {/*                    </ul>*/}
+                    {/*                </div>*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
 
-                    {/* Card 5 - Tour Plan */}
-                    <div className="card custom-card w-100">
-                        <div className="card-body p-4">
-                            <h3 className="page-title text-start mb-4">Tour Plan</h3>
-                            <ul className="nav nav-tabs justify-content-start mb-3" role="tablist">
-                                {days.map((day) => (
-                                    <li className="nav-item" key={day.id}>
-                                        <button
-                                            className={`nav-link ${activeTab === day.id ? "active" : ""}`}
-                                            onClick={() => setActiveTab(day.id)}
-                                            type="button"
-                                        >
-                                            {day.label}
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="tab-content">
-                                {days.map((day) => (
-                                    <div
-                                        key={day.id}
-                                        className={`tab-pane fade ${activeTab === day.id ? "show active" : ""}`}
-                                        id={day.id}
-                                    >
-                                        <ul className="checklist text-start px-3">
-                                            {tabContent[day.id].map((item, index) => (
-                                                <li key={index}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                    {/*/!* Card 5 - Tour Plan *!/*/}
+                    {/*<div className="card custom-card w-100">*/}
+                    {/*    <div className="card-body p-4">*/}
+                    {/*        <h3 className="page-title text-start mb-4">Tour Plan</h3>*/}
+                    {/*        <ul className="nav nav-tabs justify-content-start mb-3" role="tablist">*/}
+                    {/*            {days.map((day) => (*/}
+                    {/*                <li className="nav-item" key={day.id}>*/}
+                    {/*                    <button*/}
+                    {/*                        className={`nav-link ${activeTab === day.id ? "active" : ""}`}*/}
+                    {/*                        onClick={() => setActiveTab(day.id)}*/}
+                    {/*                        type="button"*/}
+                    {/*                    >*/}
+                    {/*                        {day.label}*/}
+                    {/*                    </button>*/}
+                    {/*                </li>*/}
+                    {/*            ))}*/}
+                    {/*        </ul>*/}
+                    {/*        <div className="tab-content">*/}
+                    {/*            {days.map((day) => (*/}
+                    {/*                <div*/}
+                    {/*                    key={day.id}*/}
+                    {/*                    className={`tab-pane fade ${activeTab === day.id ? "show active" : ""}`}*/}
+                    {/*                    id={day.id}*/}
+                    {/*                >*/}
+                    {/*                    <ul className="checklist text-start px-3">*/}
+                    {/*                        {tabContent[day.id].map((item, index) => (*/}
+                    {/*                            <li key={index}>{item}</li>*/}
+                    {/*                        ))}*/}
+                    {/*                    </ul>*/}
+                    {/*                </div>*/}
+                    {/*            ))}*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
 
                     <div className="card custom-card bg-smoke2 text-center p-4 my-4 pb-5 mb-5">
                         <div className="icon mb-3 fs-1">🤍</div>
