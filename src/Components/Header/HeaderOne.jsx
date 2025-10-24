@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import NiceSelect from './NiceSelect';
 import MobileMenu from './MobileMenu';
 import LoginForm from './LoginForm';
@@ -14,6 +14,9 @@ function HeaderOne() {
     const [isSticky, setIsSticky] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
+    const location= useLocation();
+
+    const pathname = location.pathname;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -97,7 +100,7 @@ function HeaderOne() {
                                     <nav className="main-menu d-none d-xl-inline-block">
                                         <ul>
                                             <li >
-                                                <Link className="active" to="/">
+                                                <Link className={pathname === "/" ? "active" : ""} to="/">
                                                     Home
                                                 </Link>
                                                 {/* <ul className="mega-menu mega-menu-content">
@@ -208,23 +211,23 @@ function HeaderOne() {
                                                 <Link to="/about">About Us</Link>
                                             </li> */}
                                             <li >
-                                                <Link to="/marine">Marine Attractions</Link>
+                                                <Link className={pathname === "/marine" ? "active" : ""} to="/marine">Marine Attractions</Link>
                                               
                                             </li>
                                              <li >
-                                                <Link to="/forest">Forest Attractions</Link>
+                                                <Link className={pathname === "/forest" ? "active" : ""} to="/forest">Forest Attractions</Link>
                                               
                                             </li>
                                              <li >
-                                                <Link to="/heritage">Our Heritage</Link>
+                                                <Link className={pathname === "/heritage" ? "active" : ""} to="/heritage">Our Heritage</Link>
                                               
                                             </li>
                                              <li >
-                                                <Link to="/about-fees">About Fees</Link>
+                                                <Link className={pathname === "/about-fees" ? "active" : ""} to="/about-fees">About Fees</Link>
                                               
                                             </li>
                                               <li >
-                                                <Link to="/faq">FAQ</Link>
+                                                <Link className={pathname === "/faq" ? "active" : ""} to="/faq">FAQ</Link>
                                               
                                             </li>
                 
@@ -300,10 +303,10 @@ function HeaderOne() {
                                                 </ul>
                                             </li> */}
                                             <li>
-                                                <Link to="/contact">Contact us</Link>
+                                                <Link className={pathname === "/contact" ? "active" : ""} to="/contact">Contact us</Link>
                                             </li>
                                               <li>
-                                                <Link to="/cart">Cart</Link>
+                                                <Link className={pathname === "/cart" ? "active" : ""} to="/cart">Cart</Link>
                                             </li>
                                         </ul>
                                     </nav>
