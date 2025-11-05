@@ -1,4 +1,4 @@
-import { EntityTypeResponse } from "../types/EntityType";
+import type { EntityTypeResponse } from "../types/EntityType";
 import { get } from "./http";
 
 const getAllEntity = async () => {

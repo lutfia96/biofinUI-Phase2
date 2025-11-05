@@ -1,7 +1,7 @@
-import {
-  AttractionByEntityResponse,
+import type {
   AttractionTypeResponse,
   SiteBySlugNameResponse,
+  AttractionByEntityResponse,
 } from "../types/AttractionType";
 import { get } from "./http";
 

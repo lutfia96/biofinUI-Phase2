@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios, { type AxiosRequestConfig } from "axios";
 
 const privateBaseUrl = "https://biofin-egaz.zmotion.co.tz/api/";
 // const privateBaseUrl = "https://biofin.zmotion.co.tz/api/";

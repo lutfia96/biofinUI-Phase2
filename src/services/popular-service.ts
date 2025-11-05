@@ -1,5 +1,5 @@
+import type { PopularTypeResponse } from "../types/PopularType";
 import { get } from "./http";
-import { PopularTypeResponse } from "../types/PopularType";
 
 const getAllPopular = async () => {
   const { data } = await get<PopularTypeResponse>("popular");
