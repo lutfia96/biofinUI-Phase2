@@ -6,7 +6,6 @@ import type { SiteBySlugNameResponse } from "../../types/AttractionType";
 
 function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
   const id = 1;
-  // const { id } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -16,14 +15,12 @@ function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
     return <div>Post not found!</div>;
   }
 
-  // Function to open the modal with the selected image
   const openModal = (imageSrc: string, event: any) => {
-    event.preventDefault(); // Prevent default link behavior
+    event.preventDefault();
     setModalImage(imageSrc);
     setIsModalOpen(true);
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -64,114 +61,6 @@ function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
                   </div>
                 ))}
               </div>
-              <div className="th-comments-wrap style2 ">
-                <h2 className="blog-inner-title h4">Reviews (3)</h2>
-                <ul className="comment-list">
-                  <li className="th-comment-item">
-                    <div className="th-post-comment">
-                      <div className="comment-avater">
-                        <img
-                          src="/assets/img/blog/comment-author-1.jpg"
-                          alt="Comment Author"
-                        />
-                      </div>
-                      <div className="comment-content">
-                        <h3 className="name">Adam Jhon</h3>
-                        <div className="commented-wrapp">
-                          <span className="commented-on">20 Jun, 2024</span>
-                          <span className="commented-time">08:56pm </span>
-                          <span className="comment-review">
-                            <i className="fa-solid fa-star" />
-                            <i className="fa-solid fa-star" />
-                            <i className="fa-solid fa-star" />
-                            <i className="fa-solid fa-star" />
-                            <i className="fa-solid fa-star" />
-                          </span>
-                        </div>
-                        <p className="text">
-                          Credibly pontificate transparent quality vectors with
-                          quality mindshare. Efficiently architect worldwide
-                          strategic theme areas after user.
-                        </p>
-                        <div className="reply_and_edit">
-                          <i className="fa-solid fa-thumbs-up" />
-                        </div>
-                      </div>
-                    </div>
-                    <ul className="children">
-                      <li className="th-comment-item">
-                        <div className="th-post-comment">
-                          <div className="comment-avater">
-                            <img
-                              src="/assets/img/blog/comment-author-4.jpg"
-                              alt="Comment Author"
-                            />
-                          </div>
-                          <div className="comment-content">
-                            <div className="">
-                              <h3 className="name">Maria Willson</h3>
-                              <div className="commented-wrapp">
-                                <span className="commented-on">
-                                  23 Jun, 2024
-                                </span>
-                                <span className="commented-time">08:56pm </span>
-                                <span className="comment-review">
-                                  <i className="fa-solid fa-star" />
-                                  <i className="fa-solid fa-star" />
-                                  <i className="fa-solid fa-star" />
-                                  <i className="fa-solid fa-star" />
-                                  <i className="fa-solid fa-star" />
-                                </span>
-                              </div>
-                            </div>
-                            <p className="text">
-                              It is different from airport transfer or port
-                              transfer, which are services that pick you up
-                            </p>
-                            <div className="reply_and_edit">
-                              <i className="fa-solid fa-thumbs-up" />
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="th-comment-item">
-                    <div className="th-post-comment">
-                      <div className="comment-avater">
-                        <img
-                          src="/assets/img/blog/comment-author-5.jpg"
-                          alt="Comment Author"
-                        />
-                      </div>
-                      <div className="comment-content">
-                        <div className="">
-                          <h3 className="name">Michel Edwards</h3>
-                          <div className="commented-wrapp">
-                            <span className="commented-on">27 Jun, 2024</span>
-                            <span className="commented-time">08:56pm </span>
-                            <span className="comment-review">
-                              <i className="fa-solid fa-star" />
-                              <i className="fa-solid fa-star" />
-                              <i className="fa-solid fa-star" />
-                              <i className="fa-solid fa-star" />
-                              <i className="fa-solid fa-star" />
-                            </span>
-                          </div>
-                        </div>
-                        <p className="text">
-                          Credibly pontificate transparent quality vectors with
-                          quality mindshare. Efficiently architect worldwide
-                          strategic theme areas after user.
-                        </p>
-                        <div className="reply_and_edit">
-                          <i className="fa-solid fa-thumbs-up" />
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>{" "}
               {/* Comment end */} {/* Comment Form */}
               {/* <div className="th-comment-form ">
                                 <div className="row">

@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeTwo from "./Pages/HomeTwo";
 import About from "./Pages/About";
 import Destination from "./Pages/Destination";
-import Forest from "./Pages/Forest";
 import Heritage from "./Pages/Heritage";
 import AboutFees from "./Pages/AboutFees";
 import ServiceDetails from "./Pages/ServiceDetails";
@@ -57,8 +56,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "/forest",
-        element: <Forest />,
+        element: <Destination />,
       },
+      //   {
+      //     path: "/forest",
+      //     element: <Forest />,
+      //   },
       {
         path: "/forest/:id",
         element: <ResortDetails />,
