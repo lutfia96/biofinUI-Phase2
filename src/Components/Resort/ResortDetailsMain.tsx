@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Posts from "../data/data-resort.json";
 import Modal from "../Gallery/Modal";
 import type { SiteBySlugNameResponse } from "../../types/AttractionType";
+import PricingForm from "./PricingForm";
 
 function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
   const id = 1;
@@ -133,7 +134,8 @@ function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
                             </div> */}
               <div className="widget widget_categories  ">
                 <h3 className="widget_title">Categories</h3>
-                <ul>
+                <PricingForm product={details.products} />
+                {/* <ul>
                   <li>
                     <Link to="/blog">
                       <img src="/assets/img/theme-img/map.svg" alt="" />
@@ -176,7 +178,7 @@ function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
                     </Link>
                     <span>(10)</span>
                   </li>
-                </ul>
+                </ul> */}
               </div>
               {/* <div className="widget  ">
                                 <h3 className="widget_title">Recent Posts</h3>
