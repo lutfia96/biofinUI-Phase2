@@ -29,8 +29,8 @@ function HeaderOne() {
   return (
     <>
       {/*============================== Header Area ==============================*/}
-      <header className="th-header header-layout1">
-        <div className="header-top">
+      <header className="th-header header-layout6 bg-slate-100">
+        {/* <div className="header-top">
           <div className="container th-container">
             <div className="row justify-content-center justify-content-xl-between align-items-center">
               <div className="col-auto d-none d-md-block">
@@ -63,7 +63,7 @@ function HeaderOne() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`}>
           {/* Main Menu Area */}
           <div className="menu-area">

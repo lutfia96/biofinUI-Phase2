@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { Product } from "../../types/AttractionType";
-import "./PricingForm.css";
 
 interface ReservationFormProps {
   attractionTitle?: string;
@@ -163,12 +162,14 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
             </div>
           ) : (
             <>
-              <div className="package-list">
+              <div className="max-h-64 md:max-h-80 overflow-y-auto overflow-x-auto space-y-3 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                 {props.product.map((res) => (
                   <div
                     key={res.product_code}
-                    className={`package-item ${
-                      formData.product_code === res.product_code ? "active" : ""
+                    className={`relative p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 w-fit ${
+                      formData.product_code === res.product_code
+                        ? "border-blue-500 bg-blue-50"
+                        : "border-gray-200 hover:border-blue-300 hover:bg-gray-50"
                     }`}
                     onClick={() => {
                       setFormData((prev) => ({
@@ -178,34 +179,36 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                       setPriceAndCurrencyByProductCode(res.product_code);
                     }}
                   >
-                    <div className="price-group-badge">{res.price_group}</div>
-                    <div className="package-content">
-                      <div className="package-info">
+                    <div className="badge badge-success">{res.price_group}</div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3 flex-1">
                         <div
-                          className={`radio-button ${
+                          className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
                             formData.product_code === res.product_code
-                              ? "active"
-                              : ""
+                              ? "border-blue-500 bg-blue-500"
+                              : "border-gray-300"
                           }`}
                         >
                           {formData.product_code === res.product_code && (
-                            <div className="radio-dot"></div>
+                            <div className="w-2 h-2 rounded-full bg-white"></div>
                           )}
                         </div>
-                        <div className="package-name">
-                          <h5 className="name-text">
+                        <div className="flex-1 min-w-0">
+                          <h5 className="font-semibold text-gray-800 text-base truncate space-x-2">
                             <div>{res.name}</div>
                           </h5>
                         </div>
                       </div>
-                      <div className="price-info">
-                        <span className="price-amount">
+                      <div className="text-right ml-4 shrink-0">
+                        <span className="text-xl font-bold text-blue-600">
                           {Object.is(res.currency, "TZS")
                             ? res.price
                             : res.price_USD}
                         </span>
-                        <span className="currency-text">{res.currency}</span>
-                        <p className="per-person-text">per person</p>
+                        <span className="text-gray-500 text-sm ml-1">
+                          {res.currency}
+                        </span>
+                        <p className="text-gray-500 text-xs">per person</p>
                       </div>
                     </div>
                   </div>
@@ -213,14 +216,17 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
               </div>
 
               {/* Fixed Bottom Section - Quantity and Submit */}
-              <div className="form-footer">
-                <div className="form-actions">
-                  <div className="quantity-section">
-                    <label htmlFor="quantity" className="input-label">
+              <div className="border-t border-gray-200 pt-6 bg-white">
+                <div className="flex flex-col sm:flex-row items-end gap-4">
+                  <div className="flex-1 w-full">
+                    <label
+                      htmlFor="quantity"
+                      className="block text-sm font-semibold text-gray-700 mb-3"
+                    >
                       Number of People
                     </label>
-                    <div className="quantity-input-wrapper">
-                      {/* <Users className="input-icon" /> */}
+                    <div className="flex items-center gap-3">
+                      {/* <Users className="w-5 h-5 text-gray-400" /> */}
                       <input
                         type="number"
                         name="quantity"
@@ -228,15 +234,17 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                         max="20"
                         value={formData.quantity}
                         onChange={handleChange}
-                        className="quantity-input"
+                        className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-medium"
                         required
                       />
                     </div>
                   </div>
 
                   {/* Add to Cart Button */}
-                  <div className="cart-button-section">
-                    <label className="input-label">Add to Cart</label>
+                  <div className="flex-1 w-full">
+                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                      Add to Cart
+                    </label>
                     <button
                       onClick={handleSubmit}
                       type="button"
@@ -245,12 +253,12 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                         isProductInCart ||
                         (!isCurrencyInCart && existingCart.length > 0)
                       }
-                      className="cart-button"
+                      className="w-full bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105 transform disabled:hover:scale-100"
                     >
-                      {/* <ShoppingCart className="button-icon" /> */}
+                      {/* <ShoppingCart className="w-5 h-5" /> */}
                       {isProductInCart ? "Already in Cart" : "Add To Cart"}
                     </button>
-                    {/* {localStorage.getItem("cart") && <button className="view-cart-button">View Cart</button>} */}
+                    {/* {localStorage.getItem("cart") && <button>View Cart</button>} */}
                   </div>
                 </div>
               </div>
