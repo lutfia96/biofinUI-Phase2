@@ -17,7 +17,6 @@ export const Loader = () => {
       <div className="bg-linear-to-r from-slate-200 via-white to-slate-100 w-[10%] px-9 rounded-md">
         <span className="border rounded-full w-[5%]">
           <img
-            // src="/assets/img/loader.png"
             src="/assets/img/load1.png"
             className="rounded-full w-full"
             alt="logo"
