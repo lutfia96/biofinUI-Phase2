@@ -29,25 +29,57 @@ function HeaderOne() {
   return (
     <>
       {/*============================== Header Area ==============================*/}
-      <header className="th-header header-layout6 bg-slate-100">
-        {/* <div className="header-top">
+      <header className="th-header header-layout1 bg-linear-to-r from-blue-100 via-green-200 to-blue-300">
+        <div className="header-top bg-white">
           <div className="container th-container">
             <div className="row justify-content-center justify-content-xl-between align-items-center">
-              <div className="col-auto d-none d-md-block">
-                <div className="header-links">
+              <div>
+                <div className="row align-items-center justify-content-between">
+                  <div className="flex flex-row items-center justify-center gap-4 py-0 m-[0.5px] relative">
+                    <div className="shrink-0 absolute left-0">
+                      <img
+                        src="/assets/img/smz.png"
+                        alt="Zanzibar Flag"
+                        className="w-16 h-12 sm:w-20 sm:h-16 object-contain"
+                      />
+                    </div>
+                    <div className="flex-1 text-center max-w-2xl">
+                      <h5 className="text-base sm:text-lg lg:text-xl xl:text-xl font-[Montserrat] font-bold text-slate-800 leading-tight">
+                        <span className="block font-[Poppins] font-bold text-black text-center">
+                          The Revolutionary Government of Zanzibar
+                        </span>
+                      </h5>
+                      <div className="text-center mt-2">
+                        <h4 className="text-lg sm:text-xl lg:text-2xl font-[Montserrat] font-bold leading-tight">
+                          <span className="bg-linear-to-r from-teal-500 to-green-400 bg-clip-text text-transparent">
+                            Explore Zanzibar
+                          </span>
+                        </h4>
+                      </div>
+                    </div>
+                    <div className="shrink-0 absolute right-0">
+                      <img
+                        src="/zanzibar_flag.webp"
+                        alt="Zanzibar Flag"
+                        className="w-16 h-12 sm:w-20 sm:h-16 object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="header-links">
                   <ul>
                     <li className="d-none d-xl-inline-block">
                       <i className="fa-sharp fa-regular  fa-location-dot" />
-                      <span>Zanzibar</span>
+                      <span>The Revolutionary Government of Zanzibar</span>
                     </li>
                     <li className="d-none d-xl-inline-block">
                       <i className="fa-regular fa-clock" />
                       <span>Sun to Friday</span>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
-              <div className="col-auto">
+              {/* <div className="col-auto">
                 <div className="header-right">
                   <div className="header-links">
                     <ul>
@@ -60,10 +92,10 @@ function HeaderOne() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
-        </div> */}
+        </div>
         <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`}>
           {/* Main Menu Area */}
           <div className="menu-area">
@@ -72,11 +104,11 @@ function HeaderOne() {
                 <div className="col-auto">
                   <div className="header-logo">
                     <Link to="/">
-                      <img
+                      {/* <img
                         src="/assets/img/smz.png"
                         alt="Tourm"
                         style={{ height: "80px" }}
-                      />
+                      /> */}
                     </Link>
                   </div>
                 </div>
@@ -93,24 +125,30 @@ function HeaderOne() {
                       </li>
                       <li>
                         <Link
-                          className={pathname === "/marine" ? "active" : ""}
-                          to="/marine"
+                          className={
+                            pathname === "attraction/marine" ? "active" : ""
+                          }
+                          to="/attraction/marine"
                         >
                           Marine Attractions
                         </Link>
                       </li>
                       <li>
                         <Link
-                          className={pathname === "/forest" ? "active" : ""}
-                          to="/forest"
+                          className={
+                            pathname === "attraction/forest" ? "active" : ""
+                          }
+                          to="/attraction/forest"
                         >
                           Forest Attractions
                         </Link>
                       </li>
                       <li>
                         <Link
-                          className={pathname === "/heritage" ? "active" : ""}
-                          to="/heritage"
+                          className={
+                            pathname === "attraction/heritage" ? "active" : ""
+                          }
+                          to="attraction/heritage"
                         >
                           Our Heritage
                         </Link>

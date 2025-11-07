@@ -1,2 +1,4 @@
 @import "tailwindcss";
-@tailwind utilities;
+@tilwind utilities;
+@tilwind base;
+@tilwind components;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import DestinationCard from "./DestinationCard";
 import { getSiteAttractionByEntityQuery } from "../../hooks/query/websiteQuery";
@@ -6,16 +6,8 @@ import DestinationCardTwo from "./DestinationCardTwo";
 
 function DestinationInner({ entity }: { entity: string }) {
   const [activeTab, setActiveTab] = useState("tab-grid");
-  const [entities, setEntity] = useState("");
-  console.log(entities);
-  console.log(entity);
 
-  useEffect(() => {
-    setEntity(entity);
-    if (entity) {
-    }
-  }, [entities]);
-  const { data } = getSiteAttractionByEntityQuery(entities);
+  const { data } = getSiteAttractionByEntityQuery(entity);
   return (
     <section className="space">
       <div className="container">
