@@ -30,7 +30,7 @@ function HeaderOne() {
     <>
       {/*============================== Header Area ==============================*/}
       <header className="th-header header-layout1 bg-linear-to-r from-blue-100 via-green-200 to-blue-300">
-        <div className="header-top bg-white">
+        <div className="header-top bg-linear-to-r from-blue-50 via-green-100 to-blue-100">
           <div className="container th-container">
             <div className="row justify-content-center justify-content-xl-between align-items-center">
               <div>
@@ -59,7 +59,7 @@ function HeaderOne() {
                     </div>
                     <div className="shrink-0 absolute right-0">
                       <img
-                        src="/zanzibar_flag.webp"
+                        src="/assets/img/zanzibar_flag.webp"
                         alt="Zanzibar Flag"
                         className="w-16 h-12 sm:w-20 sm:h-16 object-contain"
                       />
@@ -99,7 +99,7 @@ function HeaderOne() {
         <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`}>
           {/* Main Menu Area */}
           <div className="menu-area">
-            <div className="container th-container">
+            <div className="container th-container shadow">
               <div className="row align-items-center justify-content-between">
                 <div className="col-auto">
                   <div className="header-logo">
