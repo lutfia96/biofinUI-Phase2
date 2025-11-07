@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import DestinationCard from "./DestinationCard";
 import { getSiteAttractionByEntityQuery } from "../../hooks/query/websiteQuery";
 import DestinationCardTwo from "./DestinationCardTwo";
+import { Loader } from "../Loader";
 
 function DestinationInner({ entity }: { entity: string }) {
   const [activeTab, setActiveTab] = useState("tab-grid");
 
-  const { data } = getSiteAttractionByEntityQuery(entity);
+  const { data, isFetching } = getSiteAttractionByEntityQuery(entity);
   return (
     <section className="space">
+      {isFetching && <Loader />}
       <div className="container">
         <div className="th-sort-bar">
           <div className="row justify-content-between align-items-center">
