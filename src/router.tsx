@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeTwo from "./Pages/HomeTwo";
 import About from "./Pages/About";
 import Destination from "./Pages/Destination";
-import Heritage from "./Pages/Heritage";
 import AboutFees from "./Pages/AboutFees";
 import ServiceDetails from "./Pages/ServiceDetails";
 import Service from "./Pages/Service";
@@ -47,7 +46,7 @@ export const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/marine",
+        path: "/attraction/:entity",
         element: <Destination />,
       },
       {
@@ -55,7 +54,7 @@ export const router = createBrowserRouter([
         element: <ResortDetails />,
       },
       {
-        path: "/forest",
+        path: "/attraction/:entity",
         element: <Destination />,
       },
       //   {
@@ -67,8 +66,8 @@ export const router = createBrowserRouter([
         element: <ResortDetails />,
       },
       {
-        path: "/heritage",
-        element: <Heritage />,
+        path: "/attraction/:entity",
+        element: <Destination />,
       },
       {
         path: "/heritage/:id",
