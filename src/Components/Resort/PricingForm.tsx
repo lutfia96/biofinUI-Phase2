@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { ShoppingCart } from "lucide-react";
 import type { Product } from "../../types/AttractionType";
 
 interface ReservationFormProps {
@@ -62,8 +63,7 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
   );
 
   existingCart || !isCurrencyInCart;
-  //     &&
-  //   toast.message("You can't mix diffent Currency", { duration: 3000 })
+  // toast.message("You can't mix diffent Currency", { duration: 3000 })
   const handleSubmit = () => {
     localStorage.setItem("quantity", formData.quantity.toString());
     localStorage.setItem("product_code", formData.product_code.toString());
@@ -117,13 +117,13 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
 
   if (isSubmitted) {
     return (
-      <div className="pricing-success-container">
+      <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
         <div className="text-center">
-          <div className="success-icon">
-            {/* <Check className="w-8 h-8 text-green-600" /> */}
-          </div>
-          <h2 className="success-title">Added to Cart!</h2>
-          <p className="success-message">
+          <span className="fa fa-check text-3xl w-8 h-8 text-green-600" />
+          <h2 className="text-2xl font-bold text-gray-800 mb-3">
+            Added to Cart!
+          </h2>
+          <p className="text-gray-600 text-lg">
             You have successfully added the pricing category to your cart.
           </p>
         </div>
@@ -132,30 +132,34 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
   }
 
   return (
-    <div className="pricing-form-container">
+    <div className="bg-white rounded-2xl shadow-xl p-4 border border-gray-100">
       {/* Category Badge */}
       {props.product && props.product[0]?.product_category && (
-        <div className="category-badge">
-          <div className="badge-dot"></div>
-          <span className="badge-text">
+        <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-200 mb-6">
+          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+          <span className="text-sm font-medium text-blue-700 capitalize">
             {props.product[0].product_category}
           </span>
         </div>
       )}
 
-      <div className="pricing-content">
+      <div className="space-y-6">
         {/* Product Selection */}
         <div>
-          <h4 className="section-title">Choose Package</h4>
+          <h4 className="text-lg font-semibold text-gray-800 mb-4">
+            Choose Package
+          </h4>
 
           {/* Check if products exist */}
           {!props?.product || props.product.length === 0 ? (
-            <div className="empty-package-container">
-              <div className="empty-package-icon">
-                {/* <ShoppingCart className="w-8 h-8 text-gray-400" /> */}
+            <div className="text-center py-12 px-6 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300">
+              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ShoppingCart className="w-8 h-8 text-gray-400" />
               </div>
-              <h3 className="empty-package-title">No Packages Available</h3>
-              <p className="empty-package-text">
+              <h3 className="text-lg font-semibold text-gray-600 mb-2">
+                No Packages Available
+              </h3>
+              <p className="text-gray-500">
                 There are currently no packages available for this attraction.
                 Please check back later or contact us for more information.
               </p>
@@ -166,7 +170,7 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                 {props.product.map((res) => (
                   <div
                     key={res.product_code}
-                    className={`relative p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 w-fit ${
+                    className={`relative p-2 border-2 rounded-lg cursor-pointer transition-all duration-300 ${
                       formData.product_code === res.product_code
                         ? "border-blue-500 bg-blue-50"
                         : "border-gray-200 hover:border-blue-300 hover:bg-gray-50"
@@ -179,7 +183,7 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                       setPriceAndCurrencyByProductCode(res.product_code);
                     }}
                   >
-                    <div className="badge badge-success">{res.price_group}</div>
+                    <div>{res.price_group}</div>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3 flex-1">
                         <div
@@ -194,9 +198,9 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h5 className="font-semibold text-gray-800 text-base truncate space-x-2">
+                          <h6 className="font-semibold text-gray-800 text-base truncate space-x-2">
                             <div>{res.name}</div>
-                          </h5>
+                          </h6>
                         </div>
                       </div>
                       <div className="text-right ml-4 shrink-0">
@@ -226,7 +230,7 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                       Number of People
                     </label>
                     <div className="flex items-center gap-3">
-                      {/* <Users className="w-5 h-5 text-gray-400" /> */}
+                      <span className="fa fa-users w-5 h-5 text-gray-400" />
                       <input
                         type="number"
                         name="quantity"
@@ -234,7 +238,6 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                         max="20"
                         value={formData.quantity}
                         onChange={handleChange}
-                        className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-medium"
                         required
                       />
                     </div>
@@ -246,6 +249,7 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                       Add to Cart
                     </label>
                     <button
+                      style={{ borderRadius: ".6rem" }}
                       onClick={handleSubmit}
                       type="button"
                       disabled={
@@ -253,9 +257,9 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
                         isProductInCart ||
                         (!isCurrencyInCart && existingCart.length > 0)
                       }
-                      className="w-full bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105 transform disabled:hover:scale-100"
+                      className="w-full rounded-4xl bg-linear-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 font-semibold transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105 transform disabled:hover:scale-100"
                     >
-                      {/* <ShoppingCart className="w-5 h-5" /> */}
+                      <span className="fa fa-cart-plus w-5 h-5" />
                       {isProductInCart ? "Already in Cart" : "Add To Cart"}
                     </button>
                     {/* {localStorage.getItem("cart") && <button>View Cart</button>} */}
