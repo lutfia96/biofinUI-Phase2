@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ShoppingCart } from "lucide-react";
 import type { Product } from "../../types/AttractionType";
 
 interface ReservationFormProps {
@@ -154,7 +153,7 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
           {!props?.product || props.product.length === 0 ? (
             <div className="text-center py-12 px-6 bg-gray-50 rounded-lg border-2 border-dashed border-gray-300">
               <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShoppingCart className="w-8 h-8 text-gray-400" />
+                <span className="fa fa-cart-shopping w-8 h-8 text-gray-400" />
               </div>
               <h3 className="text-lg font-semibold text-gray-600 mb-2">
                 No Packages Available
