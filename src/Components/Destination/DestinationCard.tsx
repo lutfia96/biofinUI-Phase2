@@ -5,6 +5,7 @@ interface DestinationCardProps {
   destinationImage: string;
   destinationTitle: string;
   destinationPrice: string;
+  destinationContent: string;
 }
 function DestinationCard({ ...props }: DestinationCardProps) {
   const {

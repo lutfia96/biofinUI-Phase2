@@ -3,26 +3,18 @@ import { Link } from "react-router-dom";
 import DestinationCard from "./DestinationCard";
 import { getSiteAttractionByEntityQuery } from "../../hooks/query/websiteQuery";
 import DestinationCardTwo from "./DestinationCardTwo";
+import { Loader } from "../Loader";
 
 function DestinationInner({ entity }: { entity: string }) {
   const [activeTab, setActiveTab] = useState("tab-grid");
 
-  const { data } = getSiteAttractionByEntityQuery(entity);
+  const { data, isFetching } = getSiteAttractionByEntityQuery(entity);
   return (
     <section className="space">
+      {isFetching && <Loader />}
       <div className="container">
         <div className="th-sort-bar">
           <div className="row justify-content-between align-items-center">
-            {/* <div className="col-md-4">
-                            <div className="search-form-area">
-                                <form className="search-form">
-                                    <input type="text" placeholder="Search" />
-                                    <button type="submit">
-                                        <i className="fa-light fa-magnifying-glass" />
-                                    </button>
-                                </form>
-                            </div>
-                        </div> */}
             <div className="col-md-auto">
               <div className="sorting-filter-wrap">
                 <div className="nav" role="tablist">
@@ -75,6 +67,7 @@ function DestinationInner({ entity }: { entity: string }) {
                         destinationID={data.slug}
                         destinationImage={`${data.featured_image}`}
                         destinationTitle={data.title}
+                        destinationContent={data.content}
                         destinationPrice={data.address}
                       />
                     </div>
@@ -95,7 +88,7 @@ function DestinationInner({ entity }: { entity: string }) {
                         destinationID={data.slug}
                         destinationImage={`${data.featured_image}`}
                         destinationTitle={data.title}
-                        destinationPrice={data.location}
+                        destinationPrice={data.address}
                       />
                     </div>
                   ))}
