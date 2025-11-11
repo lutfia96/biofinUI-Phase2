@@ -238,3 +238,8 @@ function HeaderOne() {
 }
 
 export default HeaderOne;
+
+// Export function to trigger cart update event
+export const triggerCartUpdate = () => {
+  window.dispatchEvent(new Event("cartUpdated"));
+};
