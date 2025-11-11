@@ -70,7 +70,7 @@ function CartInner() {
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
   const [clearCartConfirmOpen, setClearCartConfirmOpen] = useState(false);
   const [itemToDelete, setItemToDelete] = useState<string | null>(null);
-
+  const [copyText, setCopyText] = useState("");
   const handleDeleteClick = (product_code: string) => {
     setItemToDelete(product_code);
     setDeleteConfirmOpen(true);
@@ -501,85 +501,100 @@ function CartInner() {
 
         {/* Success Modal */}
         {isSuccessModalOpen && responseData && (
-          <div className="flex justify-center gap-4" tabIndex={-1}>
-            <div className="align-middle">
-              <div className="content">
+          <>
+            <div className="flex justify-center items-center">
+              <h4 className="bg-slate-50 w-3/4 p-1 text-lg text-center text-gray-400 font-sans">
+                Order Info
+              </h4>
+            </div>
+            <div className="flex justify-center gap-4" tabIndex={-1}>
+              <div className="border-y border-green-500 rounded-md py-2">
+                <div className="content">
+                  <div className="header">
+                    <h5 className="title">Order Created Successfully</h5>
+                  </div>
+                  <div className="body">
+                    <p>
+                      Your Control Number: {copyText}
+                      <span
+                        className="p-2 rounded-2xl bg-green-300 text-white"
+                        onClick={() => {
+                          navigator.clipboard.writeText(
+                            responseData.order_number
+                          );
+                          setCopyText("Copied");
+                        }}
+                      >
+                        {responseData.order_number}
+                      </span>
+                    </p>
+                    <p>
+                      Total Amount:{" "}
+                      <span className="p-2 rounded-2xl bg-green-300 text-white">
+                        {" "}
+                        {responseData.total_amount}
+                      </span>
+                    </p>
+                    <p>
+                      Service:{" "}
+                      <span className="p-2 rounded-2xl bg-green-300 text-white">
+                        {" "}
+                        {responseData.service}
+                      </span>
+                    </p>
+                  </div>
+                  <div className="d-flex gap-3">
+                    <button
+                      type="button"
+                      className="th-btn style6 th-icon"
+                      onClick={handlePayLater}
+                    >
+                      Pay Later
+                    </button>
+                    <button
+                      type="button"
+                      className="th-btn style6"
+                      onClick={handlePaymentRedirect}
+                    >
+                      Online Payment
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="content border-y border-green-500 py-2 rounded-md">
                 <div className="header">
-                  <h5 className="title">Order Created Successfully</h5>
+                  <h5 className="title">Mobile Payment</h5>
                 </div>
                 <div className="body">
                   <p>
-                    Your Control Number:
-                    <span className="p-2 rounded-2xl bg-green-300 text-white">
-                      {responseData.order_number}
-                    </span>
+                    <select name="" id="">
+                      <option value="mixByYas">Mix by Yas</option>
+                      <option value="mixByYas">Halo Pesa</option>
+                      <option value="mixByYas">M-Pesa</option>
+                    </select>
                   </p>
                   <p>
-                    Total Amount:{" "}
-                    <span className="p-2 rounded-2xl bg-green-300 text-white">
-                      {" "}
-                      {responseData.total_amount}
-                    </span>
-                  </p>
-                  <p>
-                    Service:{" "}
-                    <span className="p-2 rounded-2xl bg-green-300 text-white">
-                      {" "}
-                      {responseData.service}
-                    </span>
+                    <input
+                      type="number"
+                      name="phoneNumber"
+                      placeholder="Phone Number"
+                      value={paymentInfo.phoneNumber}
+                      onChange={handlePaymentInputChange}
+                    />
                   </p>
                 </div>
                 <div className="d-flex gap-3">
                   <button
                     type="button"
                     className="th-btn style6 th-icon"
-                    onClick={handlePayLater}
+                    onClick={handleMixPayment}
                   >
-                    Pay Later
-                  </button>
-                  <button
-                    type="button"
-                    className="th-btn style6"
-                    onClick={handlePaymentRedirect}
-                  >
-                    Online Payment
+                    Submit
                   </button>
                 </div>
               </div>
             </div>
-            <div className="content">
-              <div className="header">
-                <h5 className="title">Mobile Payment</h5>
-              </div>
-              <div className="body">
-                <p>
-                  <select name="" id="">
-                    <option value="mixByYas">Mix by Yas</option>
-                    <option value="mixByYas">Halo Pesa</option>
-                    <option value="mixByYas">M-Pesa</option>
-                  </select>
-                </p>
-                <p>
-                  <input
-                    type="number"
-                    name="phoneNumber"
-                    placeholder="Phone Number"
-                    value={paymentInfo.phoneNumber}
-                    onChange={handlePaymentInputChange}
-                  />
-                </p>
-              </div>
-              <div className="d-flex gap-3">
-                <button
-                  type="button"
-                  className="th-btn style6 th-icon"
-                  onClick={handleMixPayment}
-                >
-                  Submit
-                </button>
-              </div>
-            </div>
-          </div>
+          </>
         )}
       </div>
     </>
