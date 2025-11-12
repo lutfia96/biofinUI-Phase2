@@ -43,7 +43,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
     <>
       <div className="bg-white rounded-lg shadow-sm p-6 min-h-[50%]">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images?.map((image, index) => {
+          {images.map((image, index) => {
             const imageUrl = typeof image === "string" ? image : image.url;
             return (
               <div
@@ -56,7 +56,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
                   alt={`${title} - Image ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0  bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
                   <span className="fa fa-magnifying-glass-plus w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
@@ -73,7 +73,7 @@ const ImageGallery = ({ images, title }: ImageGalleryProps) => {
               onClick={closeModal}
               className="absolute top-10 right-4 text-white hover:text-gray-300 z-10"
             >
-              <span className="fa fa-close text-black text-2xl w-8 h-8" />
+              <span className="fa fa-close text-2xl w-8 h-8" />
             </button>
 
             <button

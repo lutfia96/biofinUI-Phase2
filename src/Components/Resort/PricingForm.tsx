@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import type { Product } from "../../types/AttractionType";
+import { triggerCartUpdate } from "../Header/HeaderOne";
 
 interface ReservationFormProps {
   attractionTitle?: string;
@@ -96,7 +97,7 @@ const PricingForm = ({ ...props }: ReservationFormProps) => {
     ];
 
     localStorage.setItem("cart", JSON.stringify(newCart));
-    // triggerCartUpdate();
+    triggerCartUpdate();
     setIsSubmitted(true);
 
     setTimeout(() => {

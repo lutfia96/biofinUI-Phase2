@@ -31,14 +31,6 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeTwo />,
-    // {
-    //   path: "/home-agency",
-    //   element: <HomeThree />,
-    // },
-    // {
-    //   path: "/home-yacht",
-    //   element: <HomeFour />,
-    // },
     children: [
       { path: "/", element: <Index /> },
       {
@@ -50,24 +42,12 @@ export const router = createBrowserRouter([
         element: <Destination />,
       },
       {
-        path: "/marine/:id",
+        path: "/site/:id",
         element: <ResortDetails />,
       },
-      {
-        path: "/attraction/:entity",
-        element: <Destination />,
-      },
-      //   {
-      //     path: "/forest",
-      //     element: <Forest />,
-      //   },
       {
         path: "/forest/:id",
         element: <ResortDetails />,
-      },
-      {
-        path: "/attraction/:entity",
-        element: <Destination />,
       },
       {
         path: "/heritage/:id",

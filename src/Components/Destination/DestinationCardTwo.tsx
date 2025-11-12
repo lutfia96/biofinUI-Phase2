@@ -5,6 +5,7 @@ interface DestinationCardProps {
   destinationImage: string;
   destinationTitle: string;
   destinationPrice: string;
+  destinationContent: string;
 }
 function DestinationCardTwo({ ...props }: DestinationCardProps) {
   const {
@@ -20,9 +21,7 @@ function DestinationCardTwo({ ...props }: DestinationCardProps) {
       </div>
       <div className="tour-content">
         <h3 className="box-title">
-          <Link to={`/marine/${destinationID}`}>
-            {destinationTitle ? destinationTitle : "Dubai"}
-          </Link>
+          <Link to={`/site/${destinationID}`}>{destinationTitle}</Link>
         </h3>
         <div className="tour-rating">
           <div
@@ -37,7 +36,7 @@ function DestinationCardTwo({ ...props }: DestinationCardProps) {
             </span>
           </div>
           <Link
-            to={`/marine/${destinationID}`}
+            to={`/site/${destinationID}`}
             className="woocommerce-review-link"
           >
             (<span className="count">4.8</span>
@@ -46,18 +45,16 @@ function DestinationCardTwo({ ...props }: DestinationCardProps) {
         </div>
         <h4 className="tour-box_price">
           <span className="currency">
-            {destinationPrice ? destinationPrice : "$980.00"}
+            {destinationPrice ? destinationPrice : "00.00"}
           </span>
           /Person
         </h4>
+        <p>{props.destinationContent}</p>
         <div className="tour-action">
           <span>
             <i className="fa-light fa-clock" />7 Days
           </span>
-          <Link
-            to={`/marine/${destinationID}`}
-            className="th-btn style4 th-icon"
-          >
+          <Link to={`/site/${destinationID}`} className="th-btn style4 th-icon">
             Book Now
           </Link>
         </div>

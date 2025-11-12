@@ -22,7 +22,7 @@ function DestinationCard({ ...props }: DestinationCardProps) {
         </div>
         <div className="tour-content">
           <h3 className="box-title">
-            <Link to={`/marine/${destinationID}`}>
+            <Link to={`/site/${destinationID}`}>
               {destinationTitle ? destinationTitle : "Dubai"}
             </Link>
           </h3>
@@ -39,7 +39,7 @@ function DestinationCard({ ...props }: DestinationCardProps) {
               </span>
             </div>
             <Link
-              to={`/marine/${destinationID}`}
+              to={`/site/${destinationID}`}
               className="woocommerce-review-link"
             >
               (<span className="count">4.8</span>
@@ -57,7 +57,7 @@ function DestinationCard({ ...props }: DestinationCardProps) {
               <i className="fa-light fa-clock" />7 Days
             </span>
             <Link
-              to={`/marine/${destinationID}`}
+              to={`/site/${destinationID}`}
               className="th-btn style4 th-icon"
             >
               View Details
