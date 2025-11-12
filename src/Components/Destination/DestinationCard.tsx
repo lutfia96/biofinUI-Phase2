@@ -57,6 +57,17 @@ function DestinationCard({ ...props }: DestinationCardProps) {
            
           </h4>
 
+          <div className="tour-action">
+            <span>
+              <i className="fa-light fa-clock" />7 Days
+            </span>
+            <Link
+              to={`/marine/${destinationID}`}
+              className="th-btn style4 th-icon"
+            >
+              View Details
+            </Link>
+          </div>
         </div>
       </div>
     </>
