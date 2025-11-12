@@ -5,7 +5,7 @@ function FooterTwo() {
     <footer className="footer-wrapper bg-title footer-layout2">
       <div className="widget-area">
         <div className="container">
-          <div className="newsletter-area">
+          {/* <div className="newsletter-area">
             <div className="newsletter-top">
               <div className="row gy-4 align-items-center">
                 <div className="col-lg-5">
@@ -28,19 +28,25 @@ function FooterTwo() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="row justify-content-between">
             <div className="col-md-6 col-xl-3">
               <div className="widget footer-widget">
                 <div className="th-widget-about">
                   <div className="about-logo">
                     <Link to="/">
-                      <img src="/assets/img/logo-white.svg" alt="Tourm" />
+                    <h4 className="text-lg sm:text-xl lg:text-2xl font-[Montserrat] font-bold leading-tight">
+                          <span className="bg-linear-to-r from-teal-500 to-green-400 bg-clip-text text-transparent">
+                            Explore Zanzibar
+                          </span>
+                        </h4>
+                      {/* <img src="/assets/img/logo-white.svg" alt="Tourm" />
+                      ExploreZanzibar */}
                     </Link>
                   </div>
                   <p className="about-text">
-                    Rapidiously myocardinate cross-platform intellectual capital
-                    model. Appropriately create interactive infrastructures
+                   Discover the natural wonders of Zanzibar through sustainable eco-tourism experiences that preserve our heritage.
+
                   </p>
                   <div className="th-social">
                     <Link to="https://www.facebook.com/">
@@ -70,18 +76,16 @@ function FooterTwo() {
                     <li>
                       <Link to="/">Home</Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link to="/about">About us</Link>
+                    </li> */}
+                    <li>
+                      <Link to="/about-fees">About Fees</Link>
                     </li>
                     <li>
-                      <Link to="/service">Our Service</Link>
+                      <Link to="/faq">FAQ</Link>
                     </li>
-                    <li>
-                      <Link to="/contact">Terms of Service</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">Tour Booking Now</Link>
-                    </li>
+                    
                   </ul>
                 </div>
               </div>
@@ -96,15 +100,11 @@ function FooterTwo() {
                     </div>
                     <div className="details">
                       <p>
-                        <Link to="/tel:+01234567890" className="info-box_link">
-                          +01 234 567 890
+                        <Link to="/tel: +255777861079" className="info-box_link">
+                          +255777861079
                         </Link>
                       </p>
-                      <p>
-                        <Link to="/tel:+09876543210" className="info-box_link">
-                          +09 876 543 210
-                        </Link>
-                      </p>
+                      
                     </div>
                   </div>
                   <div className="info-box_text">
@@ -114,20 +114,20 @@ function FooterTwo() {
                     <div className="details">
                       <p>
                         <Link
-                          to="/mailto:mailinfo00@tourm.com"
+                          to="/mailto:info@explorezanzibar.com"
                           className="info-box_link"
                         >
-                          mailinfo00@tourm.com
+                          info@explorezanzibar.com
                         </Link>
                       </p>
-                      <p>
+                      {/* <p>
                         <Link
                           to="/mailto:support24@tourm.com"
                           className="info-box_link"
                         >
                           support24@tourm.com
                         </Link>
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                   <div className="info-box_text">
@@ -135,7 +135,7 @@ function FooterTwo() {
                       <img src="/assets/img/icon/location-dot.svg" alt="img" />
                     </div>
                     <div className="details">
-                      <p>789 Inner Lane, Holy park, California, USA</p>
+                      <p>Stone Town, Zanzibar</p>
                     </div>
                   </div>
                 </div>

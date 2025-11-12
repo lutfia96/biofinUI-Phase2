@@ -48,8 +48,13 @@ function DestinationCard({ ...props }: DestinationCardProps) {
           </div>
           <h4 className="tour-box_price">
             <span className="currency">
-              {destinationPrice ? destinationPrice : "$980.00"}
+              {destinationPrice
+                ? destinationPrice.length > 50
+                  ? destinationPrice.substring(0, 10) + "..."
+                  : destinationPrice
+                : ""}
             </span>
+           
           </h4>
 
           <div className="tour-action">
