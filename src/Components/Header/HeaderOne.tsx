@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import LoginForm from "./LoginForm";
+import GlobalSearchModal from "./GlobalSearchModal.tsx";
 
 function HeaderOne() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
   const location = useLocation();
+    const [showSearch, setShowSearch] = useState(false);
 
   const pathname = location.pathname;
 
@@ -179,12 +181,12 @@ function HeaderOne() {
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          className={pathname === "/cart" ? "active" : ""}
-                          to="/cart"
-                        >
-                          Cart
-                        </Link>
+                        {/*<Link*/}
+                        {/*  className={pathname === "/cart" ? "active" : ""}*/}
+                        {/*  to="/cart"*/}
+                        {/*>*/}
+                        {/*    <i className="fa fa-cart-circle-plus"></i>*/}
+                        {/*</Link>*/}
                       </li>
                     </ul>
                   </nav>
@@ -197,10 +199,18 @@ function HeaderOne() {
                   </button>
                 </div>
                 <div className="col-auto d-none d-xl-block">
-                  <div className="header-button">
-                    <Link to="/contact" className="th-btn style3 th-icon">
-                      Book Now
-                    </Link>
+                  <div className="header-icon">
+                    {/*<Link to="/contact" className="th-btn th-icon">*/}
+                    {/*  Book Now*/}
+                    {/*</Link>*/}
+                    {/*  <Link className={pathname === "/cart" ? "active" : ""} to="/cart">*/}
+                    {/*      <i className="fa-solid fa-magnifying-glass"></i>*/}
+                    {/*  </Link>*/}
+                      <button onClick={() => setShowSearch(true)}><i className="fa-solid fa-magnifying-glass"></i></button>
+                      <Link className={pathname === "/cart" ? "active" : ""} to="/cart">
+                          <i className="fa-solid fa-cart-shopping"></i>
+                      </Link>
+                      {showSearch && <GlobalSearchModal onClose={() => setShowSearch(false)} />}
                   </div>
                 </div>
               </div>

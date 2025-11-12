@@ -7814,6 +7814,34 @@ ol.wp-block-rss {
           align-items: center;
   gap: 15px;
 }
+.header-icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* align icons to the left */
+    gap: 15px;                  /* space between icons */
+    padding-left: 30px;         /* space from left edge */
+    margin-right: 2rem;          /* optional extra margin */
+}
+
+.header-icon i {
+    color: #ffffff;             /* white icons */
+    text-decoration: none;      /* remove link underline */
+    font-size: 1.5rem;          /* icon size */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.header-icon i:hover {
+    color: #cccccc;             /* light gray hover */
+    transform: scale(1.1);      /* subtle grow effect */
+}
+
+.header-icon i.active {
+    color: #00bfff;             /* active link color (light blue, optional) */
+}
+
 
 .header-button .th-btn {
   margin-left: 15px;
@@ -35287,15 +35315,16 @@ span.select2-selection.select2-selection--single:focus {
   height: auto;
 }
 
-.close-btn {
+.close-buton {
   position: absolute;
   top: -5px;
   right: -5px;
   font-size: 24px;
   background: none;
+    margin-bottom: 20px;
   border: none;
   cursor: pointer;
-  color: #FFF;
+  color: #0D0D0C;
 }
 
 /* Modal Overlay */
