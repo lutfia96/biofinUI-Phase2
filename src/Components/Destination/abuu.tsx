@@ -50,8 +50,7 @@ function DestinationInner({ entity }: { entity: string }) {
             </div>
           </div>
         </div>
-
-        <div className="row">
+        {/* <div className="row">
           <div className="col-xxl-12 col-lg-12">
             <div className="tab-content" id="nav-tabContent">
               <div
@@ -63,13 +62,10 @@ function DestinationInner({ entity }: { entity: string }) {
               >
                 <div className="row gy-30">
                   {data?.map((data, index) => (
-                    <div
-                      key={index}
-                      className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
-                    >
+                    <div key={index} className="col-xxl-4 col-xl-12">
                       <DestinationCard
                         destinationID={data.slug}
-                        destinationImage={data.featured_image}
+                        destinationImage={`${data.featured_image}`}
                         destinationTitle={data.title}
                         destinationContent={data.content}
                         destinationPrice={data.address}
@@ -77,6 +73,72 @@ function DestinationInner({ entity }: { entity: string }) {
                     </div>
                   ))}
                 </div>
+              </div>
+              <div
+                className={`tab-pane fade ${
+                  activeTab === "tab-list" ? "show active" : ""
+                }`}
+                id="tab-list"
+                role="tabpanel"
+              >
+                <div className="row gy-30">
+                  {data?.map((data, index) => (
+                    <div key={index} className="col-12">
+                      <DestinationCardTwo
+                        destinationID={data.slug}
+                        destinationImage={`${data.featured_image}`}
+                        destinationTitle={data.title}
+                        destinationPrice={data.address}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        <div className="row">
+          <div className="col-xxl-12 col-lg-12">
+          {/* <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"> */}
+
+            <div className="tab-content" id="nav-tabContent">
+              <div
+                className={`tab-pane fade ${
+                  activeTab === "tab-grid" ? "show active" : ""
+                }`}
+                id="tab-grid"
+                role="tabpanel"
+              >
+                {/* <div className="row gy-30">
+                  {data?.map((data, index) => (
+                    <div key={index} className="col-xxl-4 col-xl-12">
+                      <DestinationCard
+                        destinationID={data.slug}
+                        destinationImage={`${data.featured_image}`}
+                        destinationTitle={data.title}
+                        destinationContent={data.content}
+                        destinationPrice={data.address}
+                      />
+                    </div>
+                  ))}
+                </div> */}
+                <div className="row gy-30">
+  {data?.map((data, index) => (
+    <div
+      key={index}
+      className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12"
+    >
+      <DestinationCard
+        destinationID={data.slug}
+        destinationImage={data.featured_image}
+        destinationTitle={data.title}
+        destinationContent={data.content}
+        destinationPrice={data.address}
+      />
+    </div>
+  ))}
+</div>
+
               </div>
               <div
                 className={`tab-pane fade ${
