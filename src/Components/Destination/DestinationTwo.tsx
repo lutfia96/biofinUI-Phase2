@@ -11,14 +11,17 @@ function DestinationTwo() {
       className="bg-top-center position-relative space"
       id="destination-sec"
       style={{
-        backgroundImage: "url('/assets/img/bg/line-pattern2.png')",
+        // backgroundImage: "url('/assets/img/bg/line-pattern2.png')",
         backgroundRepeat: "no-repeat",
       }}
     >
       <div className="container shape-mockup-wrap">
         <div className="title-area text-center">
-          <span className="sub-title">Top Destination</span>
-          <h2 className="sec-title">Our Featured Destination</h2>
+          <span className="sub-title">
+            Explore our carefully curated attractions supported by Zanzibar's
+            Marine and Forest Ministries
+          </span>
+          <h2 className="sec-title">Discover Zanzibar's Natural Wonders</h2>
         </div>
         <div className="row">
           <div className="destination-list-area">
@@ -36,15 +39,18 @@ function DestinationTwo() {
                     backgroundImage: `url(${item.featured_image})`,
                   }}
                 >
-                  <div className="destination-content">
+                  <div className="absolute bottom-1 p-2">
                     <h4 className="box-title">
-                      <Link to="/destination/1">{item.name}</Link>
+                      <Link to="">{item.name}</Link>
                     </h4>
                     <span className="destination-subtitle">
-                      {item.name} Listing
+                      {item.description}
                     </span>
                   </div>
-                  <Link to="/contact" className="th-btn style2">
+                  <Link
+                    to={`${"attraction/" + item.slug}`}
+                    className="th-btn style3"
+                  >
                     Explore
                   </Link>
                 </div>
@@ -53,35 +59,10 @@ function DestinationTwo() {
           </div>
         </div>
         {/* <div className="destination-btn text-center mt-60">
-                    <Link to="/destination" className="th-btn style3 th-icon">
-                        View All
-                    </Link>
-                </div> */}
-        {/* Shape Mockups with Inline Styles */}
-        <div
-          className="shape-mockup movingX d-none d-xl-block"
-          style={{ top: "8%", left: "-15%" }}
-        >
-          <img src="/assets/img/shape/shape_2_1.png" alt="shape" />
-        </div>
-        <div
-          className="shape-mockup jump d-none d-xl-block"
-          style={{ top: "23%", right: "-14%" }}
-        >
-          <img src="/assets/img/shape/shape_2_2.png" alt="shape" />
-        </div>
-        <div
-          className="shape-mockup spin d-none d-xl-block"
-          style={{ bottom: "21%", left: "-14%" }}
-        >
-          <img src="/assets/img/shape/shape_2_3.png" alt="shape" />
-        </div>
-        <div
-          className="shape-mockup movingX d-none d-xl-block"
-          style={{ bottom: "12%", right: "-14%" }}
-        >
-          <img src="/assets/img/shape/shape_2_4.png" alt="shape" />
-        </div>
+          <Link to="/destination" className="th-btn style3 th-icon">
+            View All
+          </Link>
+        </div> */}
       </div>
     </div>
   );

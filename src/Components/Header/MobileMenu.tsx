@@ -26,7 +26,7 @@ function MobileMenu({ isOpen, onClose, menus }: MobileMenuProps) {
 
         <div className="mobile-logo">
           <Link to="/">
-            <img src="/assets/img/logo2.svg" alt="Tourm" />
+            <img src="/assets/img/smz.png" alt="Tourm" />
           </Link>
         </div>
 

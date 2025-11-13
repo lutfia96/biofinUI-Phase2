@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 import type { Swiper as SwiperType } from "swiper";
-import { getAttractionQuery } from "../../hooks/query/websiteQuery";
+import { getPopularQuery } from "../../hooks/query/websiteQuery";
 
 const CategoryOne = () => {
   const swiperRef = useRef<{ swiper: SwiperType } | null>(null);
-  const { data: categories } = getAttractionQuery();
+  const { data: categories } = getPopularQuery();
 
   useEffect(() => {
     if (!swiperRef.current) return;
@@ -78,14 +78,16 @@ const CategoryOne = () => {
     <section
       className="category-area bg-top-center"
       style={{
-        backgroundImage: "url(/assets/img/bg/category_bg_1.png)",
         backgroundRepeat: "no-repeat",
       }}
     >
       <div className="container th-container">
         <div className="title-area text-center">
-          <span className="sub-title">Wonderful Place For You</span>
-          <h2 className="sec-title">Tour Categories</h2>
+          <span className="sub-title">
+            Discover Zanzibar's most beloved destinations, from pristine marine
+            reserves to lush forest sanctuaries
+          </span>
+          <h2 className="sec-title">Popular Sites</h2>
         </div>
 
         <Swiper
@@ -126,9 +128,9 @@ const CategoryOne = () => {
                   />
                 </div>
                 <h3 className="box-title">
-                  <Link to="/destination">{category.title}</Link>
+                  <Link to={"site/" + category.slug}>{category.title}</Link>
                 </h3>
-                <Link className="line-btn" to="/destination">
+                <Link className="line-btn" to={"site/" + category.slug}>
                   See more
                 </Link>
               </div>

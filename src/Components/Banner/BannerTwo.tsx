@@ -121,10 +121,7 @@ function BannerTwo() {
                     data-ani="slideinup"
                     data-ani-delay="0.6s"
                   >
-                    <Link
-                      to="/destination"
-                      className="th-btn white-btn th-icon"
-                    >
+                    <Link to="/" className="th-btn white-btn th-icon">
                       Explore Tours
                     </Link>
                   </div>
@@ -189,7 +186,7 @@ function BannerTwo() {
                   <span className="d-block">
                     <i className="fa-light fa-clock" />7 Days
                   </span>
-                  <Link to="/destination/1" className="th-btn style2">
+                  <Link to="/" className="th-btn style2">
                     Book Now
                   </Link>
                 </div>
