@@ -4,7 +4,7 @@ interface DestinationCardProps {
   destinationID: string;
   destinationImage: string;
   destinationTitle: string;
-  destinationPrice: string;
+  destinationAddress: string;
   destinationContent: string;
 }
 function DestinationCardTwo({ ...props }: DestinationCardProps) {
@@ -12,45 +12,41 @@ function DestinationCardTwo({ ...props }: DestinationCardProps) {
     destinationID,
     destinationImage,
     destinationTitle,
-    destinationPrice,
+    destinationAddress,
+    destinationContent,
   } = props;
   return (
-    <div className="tour-box style-flex th-ani">
-      <div className="tour-box_img global-img">
-        <img src={destinationImage} alt="" />
-      </div>
-      <div className="tour-content">
+    <div className="row shadow h-60 rounded-3xl">
+      <div
+        className="col-sm-12 col-md-4 rounded-l-3xl"
+        style={{
+          backgroundImage: `url(${destinationImage})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "200px",
+        }}
+      ></div>
+      <div className="tour-content p-2 col-sm-12 col-md-7">
         <h3 className="box-title">
           <Link to={`/site/${destinationID}`}>{destinationTitle}</Link>
         </h3>
-        <div className="tour-rating">
-          <div
-            className="star-rating"
-            role="img"
-            aria-label="Rated 5.00 out of 5"
-          >
-            <span style={{ width: "100%" }}>
-              Rated
-              <strong className="rating">5.00</strong> out of 5 based on{" "}
-              <span className="rating">4.8</span>(4.8 Rating)
-            </span>
-          </div>
-          <Link
-            to={`/site/${destinationID}`}
-            className="woocommerce-review-link"
-          >
-            (<span className="count">4.8</span>
-            Rating)
-          </Link>
-        </div>
-        <h4 className="tour-box_price">
-          <span className="currency">
-            {destinationPrice ? destinationPrice : "00.00"}
+        <div className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
+          <span className="">
+            {destinationContent
+              ? destinationContent.length > 50
+                ? destinationContent.substring(0, 100) + "..."
+                : destinationContent
+              : ""}
           </span>
-          /Person
-        </h4>
-        <p>{props.destinationContent}</p>
-        <div className="tour-action">
+        </div>
+        <div className="flex items-center gap-2 text-gray-500 mb-6">
+          <span className="w-4 h-4 fa fa-map-marker" />
+          <span className="text-sm font-medium">
+            {destinationAddress.substring(0, 50)}
+          </span>
+        </div>
+        <div className="tour-action space-x-3">
           <span>
             <i className="fa-light fa-clock" />7 Days
           </span>

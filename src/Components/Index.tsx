@@ -6,7 +6,7 @@ import ScrollToTop from "./ScrollToTop";
 
 const Index = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#f8fafc" }}>
       <ScrollToTop />
       <BannerTwo />
       <DestinationTwo />
