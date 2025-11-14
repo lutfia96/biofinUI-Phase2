@@ -18,7 +18,7 @@ function DestinationCard({ ...props }: DestinationCardProps) {
     <>
       <div className="tour-box th-ani">
         <div className="tour-box_img global-img">
-          <img src={destinationImage} alt="" style={{ height: "100%" }} />
+          <img src={destinationImage} alt="" style={{ minHeight: "100%" }} />
         </div>
         <div className="tour-content">
           <h3 className="box-title">
@@ -54,7 +54,6 @@ function DestinationCard({ ...props }: DestinationCardProps) {
                   : destinationPrice
                 : ""}
             </span>
-           
           </h4>
 
           <div className="tour-action">

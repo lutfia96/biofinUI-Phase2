@@ -5,48 +5,22 @@ function FooterTwo() {
     <footer className="footer-wrapper bg-title footer-layout2">
       <div className="widget-area">
         <div className="container">
-          {/* <div className="newsletter-area">
-            <div className="newsletter-top">
-              <div className="row gy-4 align-items-center">
-                <div className="col-lg-5">
-                  <h2 className="newsletter-title text-white text-capitalize mb-0">
-                    get updated the latest newsletter
-                  </h2>
-                </div>
-                <div className="col-lg-7">
-                  <form className="newsletter-form style2">
-                    <input
-                      className="form-control "
-                      type="email"
-                      placeholder="Enter Email"
-                    />
-                    <button type="submit" className="th-btn style1">
-                      Subscribe Now{" "}
-                      <img src="/assets/img/icon/plane2.svg" alt="" />
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div className="row justify-content-between">
             <div className="col-md-6 col-xl-3">
               <div className="widget footer-widget">
                 <div className="th-widget-about">
                   <div className="about-logo">
                     <Link to="/">
-                    <h4 className="text-lg sm:text-xl lg:text-2xl font-[Montserrat] font-bold leading-tight">
-                          <span className="bg-linear-to-r from-teal-500 to-green-400 bg-clip-text text-transparent">
-                            Explore Zanzibar
-                          </span>
-                        </h4>
-                      {/* <img src="/assets/img/logo-white.svg" alt="Tourm" />
-                      ExploreZanzibar */}
+                      <h4 className="text-lg sm:text-xl lg:text-2xl font-[Montserrat] font-bold leading-tight">
+                        <span className="bg-linear-to-r from-teal-500 to-green-400 bg-clip-text text-transparent">
+                          Explore Zanzibar
+                        </span>
+                      </h4>
                     </Link>
                   </div>
                   <p className="about-text">
-                   Discover the natural wonders of Zanzibar through sustainable eco-tourism experiences that preserve our heritage.
-
+                    Discover the natural wonders of Zanzibar through sustainable
+                    eco-tourism experiences that preserve our heritage.
                   </p>
                   <div className="th-social">
                     <Link to="https://www.facebook.com/">
@@ -76,16 +50,15 @@ function FooterTwo() {
                     <li>
                       <Link to="/">Home</Link>
                     </li>
-                    {/* <li>
+                    <li>
                       <Link to="/about">About us</Link>
-                    </li> */}
+                    </li>
                     <li>
                       <Link to="/about-fees">About Fees</Link>
                     </li>
                     <li>
                       <Link to="/faq">FAQ</Link>
                     </li>
-                    
                   </ul>
                 </div>
               </div>
@@ -100,11 +73,13 @@ function FooterTwo() {
                     </div>
                     <div className="details">
                       <p>
-                        <Link to="/tel: +255777861079" className="info-box_link">
+                        <Link
+                          to="/tel: +255777861079"
+                          className="info-box_link"
+                        >
                           +255777861079
                         </Link>
                       </p>
-                      
                     </div>
                   </div>
                   <div className="info-box_text">
@@ -120,14 +95,14 @@ function FooterTwo() {
                           info@explorezanzibar.com
                         </Link>
                       </p>
-                      {/* <p>
+                      <p>
                         <Link
                           to="/mailto:support24@tourm.com"
                           className="info-box_link"
                         >
                           support24@tourm.com
                         </Link>
-                      </p> */}
+                      </p>
                     </div>
                   </div>
                   <div className="info-box_text">
