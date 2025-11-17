@@ -5,13 +5,13 @@ import "swiper/css";
 import { Link } from "react-router-dom";
 
 const brands = [
-  "biofin.png",
-  "egaz.png",
   "smz.png",
+  "egaz.png",
+  "biofin.png",
   "undp.png",
-  "biofin.png",
-  "egaz.png",
   "smz.png",
+  "egaz.png",
+  "biofin.png",
   "undp.png",
 ];
 
