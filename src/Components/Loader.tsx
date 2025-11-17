@@ -14,7 +14,7 @@ export const Loader = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="bg-linear-to-r from-blue-100 via-green-200 to-blue-200 opacity-80"
+      className="bg-black opacity-80"
     >
       <div className="bg-linear-to-r from-slate-200 via-white to-slate-100 w-[10%] px-9 rounded-md opacity-100">
         <span className="border rounded-full w-[5%]">

@@ -57,7 +57,7 @@ function HeaderOne() {
   return (
     <>
       {/* Header Area */}
-      <header className="th-header header-layout1 bg-linear-to-r from-blue-100 via-green-200 to-blue-300">
+      <header className="th-header header-layout1 bg-linear-to-r from-blue-100 via-green-200 to-blue-300 shadow-md">
         {/* Top Banner */}
         <div className="header-top bg-linear-to-r from-blue-50 via-green-100 to-blue-100">
           <div className="container th-container">
@@ -108,6 +108,7 @@ function HeaderOne() {
                         <Link
                           to={item.path}
                           className={pathname === item.path ? "active" : ""}
+                          style={{ color: `${isSticky ? "black" : "blue"}` }}
                         >
                           {item.label}
                         </Link>
@@ -129,16 +130,22 @@ function HeaderOne() {
                     <button onClick={() => setShowSearch(true)}>
                       <i
                         className="fa-solid text-lg fa-magnifying-glass"
-                        style={{ fontSize: "20px" }}
+                        style={{
+                          fontSize: "20px",
+                          color: `${isSticky ? "black" : "white"}`,
+                        }}
                       ></i>
                     </button>
                     <Link
                       className={pathname === "/cart" ? "active" : ""}
                       to="/cart"
                     >
-                      <i className="fa-solid fa-cart-shopping">
+                      <i
+                        className="fa-solid fa-cart-shopping"
+                        style={{ color: `${isSticky ? "black" : "white"}` }}
+                      >
                         {cartLength > 0 && (
-                          <span className="absolute bg-blue-500 text-white text-xs font-bold rounded-full px-1.5 min-w-[1.2rem] text-center">
+                          <span className="text-white bg-red-600 rounded-full text-xs w-5 h-5 flex items-center justify-center absolute top-6 right-6">
                             {cartLength}
                           </span>
                         )}
