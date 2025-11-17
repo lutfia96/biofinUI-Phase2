@@ -6,60 +6,67 @@ function FaqInner() {
 
   const faqs = [
     {
-      question: "How do I start the process of buying a home?",
+      question: " What are Marine Conservation Areas and Forest Protected Areas in Zanzibar?",
+                
       answer:
-        "The open-concept layout seamlessly connects the living room with the fully equipped kitchen, boasting top-of-the-line appliances and all the essentials for preparing delicious meals.",
+         "These are specially designated areas aimed at preserving Zanzibar's unique biodiversity. Marine Conservation Areas protect coral reefs, sea grass beds, and marine life, while Forest Protected Areas safeguard indigenous forests, endemic species, and traditional ecosystems that are vital to the island's environmental balance.",
     },
     {
-      question: "What factors should I consider when choosing a neighborhood?",
+      question: "Why is conservation important in Zanzibar?",
       answer:
-        "The responsibility for paying closing costs can vary depending on the terms negotiated between the buyer and the seller, as well as local customs and regulations.",
+        "Zanzibar's marine and forest ecosystems are home to rare and endemic species found nowhere else on Earth. Conservation efforts help maintain biodiversity, support local communities through sustainable tourism, protect against climate change impacts, and preserve these natural treasures for future generations.",
     },
     {
-      question: "How can I determine the right price for selling my property?",
+      question: "How do I visit these protected areas?",
       answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
+        "All visits must be arranged through our official booking system. Select your preferred marine or forest attraction, choose your visit date, and book your guided tour. All visits include certified guides who ensure both your safety and the protection of these sensitive environments.",
+    },
+    {
+      question: "What should I bring on my visit to a conservation area?",
+      answer:
+        "We recommend bringing comfortable clothing suitable for outdoor activities, sturdy footwear, sun protection (hat, sunscreen), insect repellent, a reusable water bottle, and a camera to capture the stunning landscapes and wildlife. Please remember to follow all guidelines provided by your guide to minimize your impact on the environment.",
+    },
+   
+    {
+      question:
+        "What if there's bad weather on my visit day?",
+      answer:
+        "Safety is our priority. If weather conditions are unsafe, we'll contact you to reschedule your visit at no additional cost. Marine activities may be particularly affected by weather conditions, and we'll work with you to find the best alternative date.",
+    },
+    {
+      question: "How do I make a booking?",
+      answer:
+        "Simply browse our marine or forest attractions, select your preferred site, choose your visit date and number of visitors, then proceed to checkout. You'll receive a confirmation email with your booking details and payment instructions.",
     },
     {
       question:
-        "What are closing costs and who is responsible for paying them?",
+        "What payment methods do you accept?",
       answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
-    },
-    {
-      question: "How can I negotiate the best price when buying a property?",
-      answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
+        "We accept payments through mobile money agents, bank transfers, and our secure online payment gateway. After booking, you'll receive a control number for easy payment processing at any authorized agent or bank.",
     },
     {
       question:
-        "What are closing costs and who is responsible for paying them?",
+        "Can I cancel or modify my booking?",
       answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
+        "Yes, you can cancel or modify your booking up to 48 hours before your scheduled visit. Contact our support team with your booking reference number for assistance with changes.",
     },
     {
       question:
-        "What are closing costs and who is responsible for paying them?",
+        "How does my visit contribute to conservation?",
       answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
+        "Your visit fees directly support conservation activities, local community programs, research initiatives, and maintenance of protected areas. By choosing sustainable tourism, you're actively participating in preserving Zanzibar's natural heritage.",
     },
     {
       question:
-        "What are closing costs and who is responsible for paying them?",
+        "What conservation guidelines should I follow?",
       answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
+        "Please follow all guide instructions, stay on designated paths, don't touch or disturb wildlife, avoid using single-use plastics, and respect local customs. Our guides will provide specific guidelines for each location to ensure minimal environmental impact.",
     },
     {
       question:
-        "What are closing costs and who is responsible for paying them?",
+        "How can I get help with my booking?",
       answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
-    },
-    {
-      question:
-        "What are closing costs and who is responsible for paying them?",
-      answer:
-        "Research the local real estate market to understand current trends, property values, and comparable sales in the area. Knowing the market will give you leverage during negotiations.",
+        "Our support team is available to assist you. Visit our Contact page for phone numbers, email addresses, and office locations. We're here to help with bookings, payment issues, or any questions about your visit.",
     },
   ];
 
