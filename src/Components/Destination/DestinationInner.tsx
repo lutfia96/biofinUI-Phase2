@@ -92,7 +92,7 @@ function DestinationInner({ entity }: { entity: string }) {
                         destinationID={data.slug}
                         destinationImage={`${data.featured_image}`}
                         destinationTitle={data.title}
-                        destinationPrice={data.address}
+                        destinationAddress={data.address}
                         destinationContent={data.content}
                       />
                     </div>

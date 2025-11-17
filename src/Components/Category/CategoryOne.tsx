@@ -125,6 +125,7 @@ const CategoryOne = () => {
                     src={category.featured_image}
                     alt={category.slug!}
                     loading="lazy"
+                    style={{ height: "20rem" }}
                   />
                 </div>
                 <h3 className="box-title">
