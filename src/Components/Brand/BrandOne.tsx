@@ -5,25 +5,17 @@ import "swiper/css";
 import { Link } from "react-router-dom";
 
 const brands = [
-  "brand_1_1.svg",
-  "brand_1_2.svg",
-  "brand_1_3.svg",
-  "brand_1_4.svg",
-  "brand_1_5.svg",
-  "brand_1_6.svg",
-  "brand_1_7.svg",
-  "brand_1_8.svg",
-  "brand_1_1.svg",
-  "brand_1_2.svg",
-  "brand_1_3.svg",
-  "brand_1_4.svg",
-  "brand_1_5.svg",
-  "brand_1_6.svg",
-  "brand_1_7.svg",
-  "brand_1_8.svg",
+  "biofin.png",
+  "egaz.png",
+  "smz.png",
+  "undp.png",
+  "biofin.png",
+  "egaz.png",
+  "smz.png",
+  "undp.png",
 ];
 
-function BrandOne({className}) {
+function BrandOne({ className }) {
   return (
     <div className={`brand-area overflow-hidden ${className}`}>
       <div className="container th-container">
@@ -49,13 +41,28 @@ function BrandOne({className}) {
                 <Link to="#">
                   <img
                     className="original"
-                    src={`/assets/img/brand/${brand}`}
+                    src={brand}
                     alt="Brand Logo"
+                    style={{
+                      width: "180px",       // increased width
+                      height: "90px",       // increased height
+                      objectFit: "contain", // keeps aspect ratio
+                      display: "block",
+                      margin: "0 auto",
+                    }}
                   />
                   <img
                     className="gray"
-                    src={`/assets/img/brand/${brand}`}
+                    src={brand}
                     alt="Brand Logo"
+                    style={{
+                      width: "180px",
+                      height: "90px",
+                      objectFit: "contain",
+                      display: "block",
+                      margin: "0 auto",
+                      filter: "grayscale(100%)",
+                    }}
                   />
                 </Link>
               </div>
@@ -68,3 +75,4 @@ function BrandOne({className}) {
 }
 
 export default BrandOne;
+
