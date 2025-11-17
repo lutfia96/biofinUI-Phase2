@@ -105,7 +105,7 @@ Last Update: 20-07-2024
   --th-border-color: #E9EDF5;
   --title-font: "Manrope", sans-serif;
   --body-font: "Inter", sans-serif;
-  --style-font: "Montez", cursive;
+  --style-font: 'Dancing Script', cursive;
   --icon-font: "Font Awesome 6 Pro";
   --main-container: 1320px;
   --container-gutters: 24px;
@@ -9050,8 +9050,8 @@ heding animation  end
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   line-height: 37px;
   background-color: #E9F6F9;
   border-radius: 50%;

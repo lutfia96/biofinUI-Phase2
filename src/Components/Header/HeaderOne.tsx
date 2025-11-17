@@ -65,7 +65,7 @@ function HeaderOne() {
               <img
                 src="/assets/img/smz.png"
                 alt="Zanzibar Flag"
-                className="w-16 h-12 sm:w-20 sm:h-16 object-contain absolute left-0"
+                className="w-16 h-12 sm:w-20 sm:h-16 object-contain ml-50 absolute left-0"
               />
 
               <div className="flex-1 text-center max-w-2xl">
@@ -74,8 +74,8 @@ function HeaderOne() {
                     The Revolutionary Government of Zanzibar
                   </span>
                 </h5>
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-[Montserrat] font-bold mt-2">
-                  <span className="bg-linear-to-r from-teal-500 to-green-400 bg-clip-text text-transparent">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-[Montez] font-bold mt-2">
+                  <span className="bg-linear-to-r from-teal-500 to-green-400 bg-clip-text text-transparent font-[Montez]">
                     Explore Zanzibar
                   </span>
                 </h4>
@@ -84,7 +84,7 @@ function HeaderOne() {
               <img
                 src="/assets/img/zanzibar_flag.webp"
                 alt="Zanzibar Flag"
-                className="w-16 h-12 sm:w-20 sm:h-16 object-contain absolute right-0"
+                className="w-16 h-12 sm:w-20 sm:h-16 object-contain mr-50 absolute right-0"
               />
             </div>
           </div>

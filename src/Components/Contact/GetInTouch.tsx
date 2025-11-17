@@ -13,7 +13,7 @@ function GetInTouch() {
                     <div className="col-xl-4 col-lg-6">
                         <div className="about-contact-grid style2">
                             <div className="about-contact-icon">
-                                <img src="/assets/img/icon/location-dot2.svg" alt="" />
+                                <img src="/assets/img/icon/location-dot2.svg" alt="" className="ml-3 mt-3 pt-1 pl-2"/>
                             </div>
                             <div className="about-contact-details">
                                 <h6 className="box-title">Our Address</h6>
@@ -26,7 +26,7 @@ function GetInTouch() {
                     <div className="col-xl-4 col-lg-6">
                         <div className="about-contact-grid">
                             <div className="about-contact-icon">
-                                <img src="/assets/img/icon/call.svg" alt="" />
+                                <img src="/assets/img/icon/call.svg" alt="" className="ml-3 mt-3 pt-2 pl-2"/>
                             </div>
                             <div className="about-contact-details">
                                 <h6 className="box-title">Phone Number</h6>
@@ -40,7 +40,7 @@ function GetInTouch() {
                     <div className="col-xl-4 col-lg-6">
                         <div className="about-contact-grid">
                             <div className="about-contact-icon">
-                                <img src="/assets/img/icon/mail.svg" alt="" />
+                                <img src="/assets/img/icon/mail.svg" alt="" className="ml-3 mt-3 pt-2 pl-2"/>
                             </div>
                             <div className="about-contact-details">
                                 <h6 className="box-title">Email Address</h6>
