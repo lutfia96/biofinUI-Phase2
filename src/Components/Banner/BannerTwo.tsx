@@ -187,7 +187,7 @@ function BannerTwo() {
                     <i className="fa-light fa-clock" />7 Days
                   </span>
                   <Link to="/" className="th-btn style2">
-                    Book Now
+                    Alter background
                   </Link>
                 </div>
               </div>

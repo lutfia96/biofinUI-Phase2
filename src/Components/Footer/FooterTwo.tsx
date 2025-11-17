@@ -69,7 +69,7 @@ function FooterTwo() {
                 <div className="th-widget-contact">
                   <div className="info-box_text">
                     <div className="icon">
-                      <img src="/assets/img/icon/phone.svg" alt="img" />
+                      <img src="/assets/img/icon/phone.svg" alt="img" className="ml-2 mt-2 pt-1 pl-1"/>
                     </div>
                     <div className="details">
                       <p>
@@ -84,7 +84,7 @@ function FooterTwo() {
                   </div>
                   <div className="info-box_text">
                     <div className="icon">
-                      <img src="/assets/img/icon/envelope.svg" alt="img" />
+                      <img src="/assets/img/icon/envelope.svg" alt="img" className="ml-2 mt-2 pt-1 pl-1"/>
                     </div>
                     <div className="details">
                       <p>
@@ -107,7 +107,7 @@ function FooterTwo() {
                   </div>
                   <div className="info-box_text">
                     <div className="icon">
-                      <img src="/assets/img/icon/location-dot.svg" alt="img" />
+                      <img src="/assets/img/icon/location-dot.svg" alt="img" className="ml-2 mt-2 pt-1 pl-1"/>
                     </div>
                     <div className="details">
                       <p>Stone Town, Zanzibar</p>
