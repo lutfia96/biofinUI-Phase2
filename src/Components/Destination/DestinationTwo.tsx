@@ -20,7 +20,7 @@ function DestinationTwo() {
             {/*// css line 108*/}
           <span className="sub-title">
             Explore our carefully curated attractions supported by Zanzibar's
-            Marine and Forest Ministries
+            Marine and Forest Adventures
           </span>
           <h2 className="sec-title">Discover Zanzibar's Natural Wonders</h2>
         </div>
