@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import LoginForm from "./LoginForm";
 import GlobalSearchModal from "./GlobalSearchModal";
+import "./headerOne.css"
 
 function HeaderOne() {
   const [isSticky, setIsSticky] = useState(false);
@@ -59,7 +60,8 @@ function HeaderOne() {
       {/* Header Area */}
       <header className="th-header header-layout1 bg-linear-to-r from-blue-100 via-green-200 to-blue-300 shadow-md">
         {/* Top Banner */}
-        <div className="header-top bg-linear-to-r from-blue-50 via-green-100 to-blue-100">
+        <div className="header-top bg-linear-to-r from-blue-50 via-green-100 to-blue-100 banners-bg">
+       
           <div className="container th-container">
             <div className="flex flex-row items-center justify-center gap-4 py-0 m-[0.5px] relative">
               <img
