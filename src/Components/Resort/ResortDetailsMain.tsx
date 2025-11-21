@@ -53,8 +53,6 @@ function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
                     </div>
                   </div>
                 </div>
-                {/* <h3 className="page-title mt-30 mb-30">From our gallery</h3> */}
-                {/* <ImageGallery images={details.images} title={details.title} /> */}
               </div>
             </div>
           </div>
@@ -63,24 +61,6 @@ function ResortDetailsMain({ ...details }: SiteBySlugNameResponse) {
               <PricingForm product={details.products} />
             </aside>
           </div>
-        </div>
-        <div
-          className="shape-mockup shape1 d-none d-xxl-block"
-          style={{ bottom: "35%", right: "-12%" }}
-        >
-          <img src="/assets/img/shape/shape_1.png" alt="shape" />
-        </div>
-        <div
-          className="shape-mockup shape2 d-none d-xl-block"
-          style={{ bottom: "31%", right: "-8%" }}
-        >
-          <img src="/assets/img/shape/shape_2.png" alt="shape" />
-        </div>
-        <div
-          className="shape-mockup shape3 d-none d-xxl-block"
-          style={{ bottom: "33%", right: "-5%" }}
-        >
-          <img src="/assets/img/shape/shape_3.png" alt="shape" />
         </div>
       </div>
     </section>

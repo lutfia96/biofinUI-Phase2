@@ -307,6 +307,7 @@ function CartInner() {
                                   handleDeleteClick(item.product_code)
                                 }
                                 className="remove"
+                                type="button"
                               >
                                 <i className="fal fa-trash-alt" />
                               </button>
@@ -435,18 +436,21 @@ function CartInner() {
 
         {/* Delete Confirmation Modal */}
         {deleteConfirmOpen && (
-          <div className="modal show d-block" tabIndex={-1}>
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title">Confirm Removal</h5>
+          <div
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+            tabIndex={-1}
+          >
+            <div className="relative max-w-4xl max-h-full">
+              <div className="bg-white rounded-md p-3">
+                <div className="">
+                  <h5 className="">Confirm Removal</h5>
                 </div>
-                <div className="modal-body">
+                <div className="">
                   <p>
                     Are you sure you want to remove this item from your cart?
                   </p>
                 </div>
-                <div className="modal-footer">
+                <div className="">
                   <button
                     type="button"
                     className="th-btn"
@@ -469,16 +473,16 @@ function CartInner() {
 
         {/* Clear Cart Confirmation Modal */}
         {clearCartConfirmOpen && (
-          <div className="modal show d-block" tabIndex={-1}>
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title">Clear Cart</h5>
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+            <div className="relative max-w-4xl max-h-full">
+              <div className="bg-white rounded-md p-3">
+                <div className="">
+                  <h5 className="">Clear Cart</h5>
                 </div>
-                <div className="modal-body">
+                <div className="">
                   <p>Are you sure you want to clear your entire cart?</p>
                 </div>
-                <div className="modal-footer">
+                <div className="">
                   <button
                     type="button"
                     className="th-btn"

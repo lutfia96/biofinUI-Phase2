@@ -121,6 +121,7 @@ function HeaderOne() {
                 <button
                   type="button"
                   className="th-menu-toggle d-block d-xl-none"
+                  // style={{ position: "absolute", right: 3, top: 4 }}
                   onClick={() => setIsMobileMenuOpen(true)}
                 >
                   <i className="far fa-bars" />

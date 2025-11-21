@@ -16,7 +16,6 @@ function About() {
       <ElementSection className={undefined} />
       <TourGuideTwo />
       <TestimonialOne />
-      {/* <BrandOne/> */}
       <GalleryFive />
       <ScrollToTop />
     </>
