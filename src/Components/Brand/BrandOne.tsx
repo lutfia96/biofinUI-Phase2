@@ -1,7 +1,5 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
 import { Link } from "react-router-dom";
 
 const brands = [
@@ -15,7 +13,7 @@ const brands = [
   "undp.png",
 ];
 
-function BrandOne({ className }) {
+function BrandOne({ className }: { className: string | undefined }) {
   return (
     <div className={`brand-area overflow-hidden ${className}`}>
       <div className="container th-container">
@@ -44,8 +42,8 @@ function BrandOne({ className }) {
                     src={brand}
                     alt="Brand Logo"
                     style={{
-                      width: "180px",       // increased width
-                      height: "90px",       // increased height
+                      width: "180px", // increased width
+                      height: "90px", // increased height
                       objectFit: "contain", // keeps aspect ratio
                       display: "block",
                       margin: "0 auto",
@@ -75,4 +73,3 @@ function BrandOne({ className }) {
 }
 
 export default BrandOne;
-

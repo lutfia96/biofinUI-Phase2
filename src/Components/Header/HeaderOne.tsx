@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
-import LoginForm from "./LoginForm";
 import GlobalSearchModal from "./GlobalSearchModal";
-import "./headerOne.css"
+import "./headerOne.css";
 
 function HeaderOne() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const { pathname } = useLocation();
   const [cartLength, setCartLength] = useState(() => {
@@ -61,7 +59,6 @@ function HeaderOne() {
       <header className="th-header header-layout1 bg-linear-to-r from-blue-100 via-green-200 to-blue-300 shadow-md">
         {/* Top Banner */}
         <div className="header-top bg-linear-to-r from-blue-50 via-green-100 to-blue-100 banners-bg">
-       
           <div className="container th-container">
             <div className="flex flex-row items-center justify-center gap-4 py-0 m-[0.5px] relative">
               <img
@@ -185,10 +182,6 @@ function HeaderOne() {
         menus={menuItems}
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
-      />
-      <LoginForm
-        isOpen={isLoginFormOpen}
-        onClose={() => setIsLoginFormOpen(false)}
       />
     </>
   );

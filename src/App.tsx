@@ -20,8 +20,8 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-      {/* <Toaster />
-      <Sonner /> */}
+      {/* <Toaster />*/}
+      {/* <Sooner />  */}
     </QueryClientProvider>
   );
 }

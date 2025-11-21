@@ -5,7 +5,7 @@ function Heritage() {
   return (
     <>
       <Breadcrumb title="Heritage attaractions" />
-      <DestinationInner />
+      <DestinationInner entity="heritage" />
     </>
   );
 }

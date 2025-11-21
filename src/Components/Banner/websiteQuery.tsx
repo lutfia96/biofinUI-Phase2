@@ -1,5 +1,4 @@
 import attractionService from "../../services/attraction-service";
-// import attractionService from "@/services/attraction-service";
 import carousalService from "../../services/carousal-service";
 import categoryService from "../../services/category-service";
 import entityService from "../../services/entity-service";

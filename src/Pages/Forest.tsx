@@ -5,7 +5,7 @@ function Forest() {
   return (
     <>
       <Breadcrumb title="Forest attaractions" />
-      <DestinationInner />
+      <DestinationInner entity="forest" />
     </>
   );
 }

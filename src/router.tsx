@@ -3,7 +3,6 @@ import HomeTwo from "./Pages/HomeTwo";
 import About from "./Pages/About";
 import Destination from "./Pages/Destination";
 import AboutFees from "./Pages/AboutFees";
-import ServiceDetails from "./Pages/ServiceDetails";
 import Cart from "./Pages/Cart";
 import Checkout from "./Pages/Checkout";
 import ResortDetails from "./Pages/ResortDetails";
@@ -42,10 +41,10 @@ export const router = createBrowserRouter([
         path: "/about-fees",
         element: <AboutFees />,
       },
-      {
-        path: "/service/:id",
-        element: <ServiceDetails />,
-      },
+      // {
+      //   path: "/service/:id",
+      //   element: <ServiceDetails />,
+      // },
       {
         path: "/cart",
         element: <Cart />,
